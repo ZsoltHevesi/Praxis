@@ -1,2 +1,3 @@
 # Dyspraxia App
- Mobile game app to enhance motor skills
+Team project
+ Mobile game app to enhance motor skills. 
