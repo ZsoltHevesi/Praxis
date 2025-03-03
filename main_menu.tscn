@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0ubqw278xdew"]
+
+[ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://whiteback.jpg" id="1_litcs"]
+[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://upheavtt.ttf" id="2_st02u"]
+[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://praxislogo.png" id="2_yloyd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
+texture = ExtResource("1_litcs")
+modulate_color = Color(0.849621, 0.849621, 0.849621, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xnpp"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = 112.0
+offset_right = 116.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
+theme_override_fonts/font = ExtResource("2_st02u")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
+text = "Click to begin"
+
+[node name="Praxislogo" type="Sprite2D" parent="."]
+position = Vector2(563.906, 302.563)
+scale = Vector2(0.950474, 0.881275)
+texture = ExtResource("2_yloyd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -289.0
+offset_right = 204.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_st02u")
+theme_override_font_sizes/font_size = 111
+text = "Praxis"
