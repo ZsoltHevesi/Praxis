@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dyspraxia App"
-run/main_scene="res://main_menu.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
@@ -22,3 +22,4 @@ project/assembly_name="Dyspraxia App"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

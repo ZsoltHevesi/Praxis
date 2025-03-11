@@ -1,5 +1,6 @@
 extends Control
 
+@export var next_scene: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,4 +13,4 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_menu2.tscn")
+	get_tree().change_scene_to_file(next_scene)

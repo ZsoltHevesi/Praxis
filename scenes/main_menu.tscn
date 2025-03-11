@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://d0ubqw278xdew"]
 
-[ext_resource type="Script" uid="uid://dicnhxxgb1ttd" path="res://main_menu.gd" id="1_b4hek"]
-[ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://whiteback.jpg" id="1_litcs"]
-[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://upheavtt.ttf" id="2_st02u"]
-[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://praxislogo.png" id="2_yloyd"]
+[ext_resource type="Script" uid="uid://dicnhxxgb1ttd" path="res://scenes/main_menu.gd" id="1_b4hek"]
+[ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="1_litcs"]
+[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://assets/upheavtt.ttf" id="2_st02u"]
+[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="2_yloyd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
 texture = ExtResource("1_litcs")
@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b4hek")
+next_scene = "res://scenes/main_menu2.tscn"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

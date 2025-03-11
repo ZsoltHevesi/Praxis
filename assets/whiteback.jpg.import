@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmvyi0dfxd26h"
-path="res://.godot/imported/praxislogo.png-9801e0fcfae8f8e3229fea3d386b7b20.ctex"
+uid="uid://cg14yt48cowke"
+path="res://.godot/imported/whiteback.jpg-5f14015b563b8a0ee3ec9e072e101d47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://praxislogo.png"
-dest_files=["res://.godot/imported/praxislogo.png-9801e0fcfae8f8e3229fea3d386b7b20.ctex"]
+source_file="res://assets/whiteback.jpg"
+dest_files=["res://.godot/imported/whiteback.jpg-5f14015b563b8a0ee3ec9e072e101d47.ctex"]
 
 [params]
 
