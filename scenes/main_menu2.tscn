@@ -35,84 +35,81 @@ grow_vertical = 2
 scale = Vector2(0.9888, 1.00124)
 theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 
-[node name="Button" type="Button" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -240.0
-offset_top = -161.0
-offset_right = 195.0
-offset_bottom = -61.0
+anchors_preset = -1
+anchor_left = 0.107
+anchor_top = 0.378
+anchor_right = 0.893
+anchor_bottom = 0.414
+offset_left = -0.0400085
+offset_top = -0.440033
+offset_right = 0.039978
+offset_bottom = 0.279968
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rppgu")
+theme_override_font_sizes/font_size = 40
+text = "Select category of choice"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.222
+anchor_top = 0.48
+anchor_right = 0.778
+anchor_bottom = 0.724
+offset_left = -0.340012
+offset_top = -0.400024
+offset_right = 0.339966
+offset_bottom = 0.47998
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("2_rppgu")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "Motor skills"
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -383.0
-offset_top = -251.0
-offset_right = 438.0
-offset_bottom = -150.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_rppgu")
-theme_override_font_sizes/font_size = 58
-text = "Select category of choice"
-
-[node name="Button2" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -232.0
-offset_top = -19.0
-offset_right = 187.0
-offset_bottom = 79.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Button2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("2_rppgu")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "organisation"
 
-[node name="Button3" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -228.0
-offset_top = 124.0
-offset_right = 196.0
-offset_bottom = 226.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Button3" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(450, 60)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("2_rppgu")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "speech and communiction"
 
-[node name="Praxislogo" type="Sprite2D" parent="."]
-position = Vector2(1056, 58)
-scale = Vector2(0.25177, 0.235552)
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.228
+anchor_right = 0.557
+anchor_bottom = 0.268
+offset_left = 1.0
+offset_top = -0.440018
+offset_right = -0.0400391
+offset_bottom = 0.359985
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Praxislogo" type="Sprite2D" parent="Control"]
 texture = ExtResource("3_1k6i1")
 
-[connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_motorskills_pressed"]

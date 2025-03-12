@@ -36,16 +36,17 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 
 [node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 60)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -134.0
-offset_top = 112.0
-offset_right = 116.0
-offset_bottom = 165.0
+anchors_preset = -1
+anchor_left = 0.292
+anchor_top = 0.612
+anchor_right = 0.708
+anchor_bottom = 0.673
+offset_left = -0.240021
+offset_top = 0.239929
+offset_right = 0.23999
+offset_bottom = 0.459961
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
@@ -54,27 +55,38 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "Click to begin"
 
-[node name="Praxislogo" type="Sprite2D" parent="."]
-position = Vector2(563.906, 302.563)
-scale = Vector2(0.950474, 0.881275)
-texture = ExtResource("2_yloyd")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -214.0
-offset_top = -289.0
-offset_right = 204.0
-offset_bottom = -188.0
+anchors_preset = -1
+anchor_left = 0.226
+anchor_top = 0.398
+anchor_right = 0.774
+anchor_bottom = 0.501
+offset_left = 0.279999
+offset_top = -0.0400391
+offset_right = -0.280029
+offset_bottom = 0.0199585
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_st02u")
 theme_override_font_sizes/font_size = 111
 text = "Praxis"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.492
+anchor_top = 0.244
+anchor_right = 0.547
+anchor_bottom = 0.285
+offset_left = -0.240021
+offset_top = -0.12001
+offset_right = 0.159973
+offset_bottom = -0.300018
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Praxislogo" type="Sprite2D" parent="Control"]
+texture = ExtResource("2_yloyd")
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

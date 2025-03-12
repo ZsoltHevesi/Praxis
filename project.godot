@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Dyspraxia App"
+config/name="Praxis"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/image="uid://bmvyi0dfxd26h"
+config/icon="uid://bmvyi0dfxd26h"
 
 [display]
 
