@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bj6lewi1nvbqj"]
 
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="1_jec2i"]
-[ext_resource type="Script" uid="uid://c0jo77f6qupjo" path="res://scripts/main_menu_2.gd" id="1_nf4xv"]
+[ext_resource type="Script" path="res://scripts/main_menu_2.gd" id="1_nf4xv"]
 [ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://assets/upheavtt.ttf" id="2_rppgu"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="3_1k6i1"]
 

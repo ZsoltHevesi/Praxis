@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0ubqw278xdew"]
+[gd_scene load_steps=7 format=3 uid="uid://dihhddyhdkr5h"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_b4hek"]
-[ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="1_litcs"]
-[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://assets/upheavtt.ttf" id="2_st02u"]
-[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="2_yloyd"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4gv4q"]
+[ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="2_bhhwe"]
+[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://assets/upheavtt.ttf" id="3_mjxfl"]
+[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="4_j66do"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
-texture = ExtResource("1_litcs")
+texture = ExtResource("2_bhhwe")
 modulate_color = Color(0.849621, 0.849621, 0.849621, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xnpp"]
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_b4hek")
+script = ExtResource("1_4gv4q")
 next_scene = "res://scenes/main_menu2.tscn"
 
 [node name="Panel" type="Panel" parent="."]
@@ -50,7 +50,7 @@ offset_bottom = 0.459961
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
-theme_override_fonts/font = ExtResource("2_st02u")
+theme_override_fonts/font = ExtResource("3_mjxfl")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "Click to begin"
@@ -69,7 +69,7 @@ offset_bottom = 0.0199585
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_st02u")
+theme_override_fonts/font = ExtResource("3_mjxfl")
 theme_override_font_sizes/font_size = 111
 text = "Praxis"
 
@@ -87,6 +87,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
-texture = ExtResource("2_yloyd")
+texture = ExtResource("4_j66do")
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
