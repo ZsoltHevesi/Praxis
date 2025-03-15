@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://d0ubqw278xdew"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_b4hek"]
+[ext_resource type="Script" uid="uid://dicnhxxgb1ttd" path="res://scripts/main_menu.gd" id="1_b4hek"]
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="1_litcs"]
-[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://assets/upheavtt.ttf" id="2_st02u"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="2_yloyd"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
 texture = ExtResource("1_litcs")
@@ -50,7 +50,7 @@ offset_bottom = 0.459961
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
-theme_override_fonts/font = ExtResource("2_st02u")
+theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "Click to begin"
@@ -58,18 +58,18 @@ text = "Click to begin"
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.226
-anchor_top = 0.398
-anchor_right = 0.774
-anchor_bottom = 0.501
-offset_left = 0.279999
-offset_top = -0.0400391
-offset_right = -0.280029
-offset_bottom = 0.0199585
+anchor_left = 0.258
+anchor_top = 0.349
+anchor_right = 0.749
+anchor_bottom = 0.484
+offset_left = 0.23999
+offset_top = -58.02
+offset_right = 15.72
+offset_bottom = 4.67996
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_st02u")
+theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 111
 text = "Praxis"
 
@@ -87,6 +87,22 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(230, -74)
 texture = ExtResource("2_yloyd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.283
+anchor_top = 0.515
+anchor_right = 0.694
+anchor_bottom = 0.557
+offset_left = 17.24
+offset_top = 0.299957
+offset_right = 0.320007
+offset_bottom = 8.14001
+theme_override_fonts/normal_font = ExtResource("3_wu84c")
+text = "Technology for ability not limits"
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

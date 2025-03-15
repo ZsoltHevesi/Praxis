@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dihhddyhdkr5h"]
 
-[ext_resource type="Script" path="res://scenes/main_menu_3.gd" id="1_tcqh3"]
+[ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scenes/main_menu_3.gd" id="1_tcqh3"]
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="2_bhhwe"]
-[ext_resource type="FontFile" uid="uid://boheywdgr14me" path="res://assets/upheavtt.ttf" id="3_mjxfl"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="4_j66do"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
@@ -39,18 +39,18 @@ custom_minimum_size = Vector2(300, 60)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.292
-anchor_top = 0.612
-anchor_right = 0.708
-anchor_bottom = 0.673
+anchor_top = 0.427
+anchor_right = 0.704
+anchor_bottom = 0.5
 offset_left = -4.23999
-offset_top = -181.76
-offset_right = 26.24
-offset_bottom = -159.54
+offset_top = -0.460022
+offset_right = 29.12
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.912323, 1.20166)
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
-theme_override_fonts/font = ExtResource("3_mjxfl")
+theme_override_fonts/font = ExtResource("3_x2sip")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "Simple"
@@ -60,18 +60,18 @@ custom_minimum_size = Vector2(300, 60)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.292
-anchor_top = 0.612
-anchor_right = 0.708
-anchor_bottom = 0.673
+anchor_top = 0.583
+anchor_right = 0.706
+anchor_bottom = 0.657
 offset_left = -7.23999
-offset_top = -50.76
-offset_right = 28.24
-offset_bottom = -31.54
+offset_top = -22.34
+offset_right = 29.68
+offset_bottom = -15.86
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.912323, 1.20166)
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
-theme_override_fonts/font = ExtResource("3_mjxfl")
+theme_override_fonts/font = ExtResource("3_x2sip")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "challenging"
@@ -79,19 +79,19 @@ text = "challenging"
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.226
-anchor_top = 0.398
-anchor_right = 0.774
-anchor_bottom = 0.501
-offset_left = -136.72
-offset_top = -216.04
-offset_right = 126.72
-offset_bottom = -215.98
+anchor_left = 0.055
+anchor_top = 0.156
+anchor_right = 0.948
+anchor_bottom = 0.227
+offset_left = 20.4
+offset_top = 9.12001
+offset_right = 35.4399
+offset_bottom = 40.54
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0236, 0.966158)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_mjxfl")
+theme_override_fonts/font = ExtResource("3_x2sip")
 theme_override_font_sizes/font_size = 50
 text = "Select difficulty level"
 

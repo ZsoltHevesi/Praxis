@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://boheywdgr14me"
-path="res://.godot/imported/upheavtt.ttf-ba33a0836ad9e7a241460369a660ef0f.fontdata"
+uid="uid://sikvy487dffv"
+path="res://.godot/imported/OpenDyslexic-Bold.otf-27df164c2c04e9849ef2bd58bb353943.fontdata"
 
 [deps]
 
-source_file="res://assets/upheavtt.ttf"
-dest_files=["res://.godot/imported/upheavtt.ttf-ba33a0836ad9e7a241460369a660ef0f.fontdata"]
+source_file="res://fonts/OpenDyslexic-Bold.otf"
+dest_files=["res://.godot/imported/OpenDyslexic-Bold.otf-27df164c2c04e9849ef2bd58bb353943.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
-subpixel_positioning=1
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
