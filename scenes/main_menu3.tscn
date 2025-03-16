@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dihhddyhdkr5h"]
+[gd_scene load_steps=9 format=3 uid="uid://dihhddyhdkr5h"]
 
 [ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scenes/main_menu_3.gd" id="1_tcqh3"]
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="2_bhhwe"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="4_j66do"]
+[ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://images/back-arrow.png" id="5_g8u7o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
 texture = ExtResource("2_bhhwe")
@@ -15,6 +16,8 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epkpe"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -109,11 +112,28 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
+visible = false
 position = Vector2(-276, 671)
 scale = Vector2(0.478543, 0.417671)
 texture = ExtResource("4_j66do")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.144
+anchor_bottom = 0.111
+offset_left = 652.0
+offset_top = -32.0
+offset_right = 1113.32
+offset_bottom = 371.22
+scale = Vector2(0.165852, 0.226902)
+pivot_offset = Vector2(-769.385, 32.2083)
+theme_override_font_sizes/font_size = 17
+theme_override_icons/icon = ExtResource("5_g8u7o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_epkpe")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

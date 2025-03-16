@@ -95,14 +95,15 @@ texture = ExtResource("2_yloyd")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.283
-anchor_top = 0.515
-anchor_right = 0.694
-anchor_bottom = 0.557
-offset_left = 17.24
-offset_top = 0.299957
-offset_right = 0.320007
-offset_bottom = 8.14001
+anchor_top = 0.5
+anchor_right = 0.747
+anchor_bottom = 0.543
+offset_left = 14.24
+offset_top = -3.0
+offset_right = 0.159973
+offset_bottom = 9.85999
 theme_override_fonts/normal_font = ExtResource("3_wu84c")
+theme_override_font_sizes/bold_italics_font_size = 1
 text = "Technology for ability not limits"
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

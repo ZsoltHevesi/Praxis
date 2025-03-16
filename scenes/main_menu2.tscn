@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj6lewi1nvbqj"]
+[gd_scene load_steps=9 format=3 uid="uid://bj6lewi1nvbqj"]
 
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="1_jec2i"]
 [ext_resource type="Script" uid="uid://c0jo77f6qupjo" path="res://scripts/main_menu_2.gd" id="1_nf4xv"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="3_1k6i1"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_vvfmj"]
+[ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://images/back-arrow.png" id="4_vvfmj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
 texture = ExtResource("1_jec2i")
@@ -15,6 +16,8 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11ndu"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -38,14 +41,14 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.073
-anchor_top = 0.128
-anchor_right = 0.893
-anchor_bottom = 0.2
-offset_left = 27.44
-offset_top = 10.56
-offset_right = 3.03998
-offset_bottom = -24.0
+anchor_left = 0.058
+anchor_top = 0.135
+anchor_right = 0.931
+anchor_bottom = 0.233
+offset_left = -13.76
+offset_top = 5.7
+offset_right = 25.6799
+offset_bottom = -6.34001
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -56,10 +59,10 @@ text = "Select category of choice"
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-anchor_left = 0.141
-anchor_top = 0.275
-anchor_right = 0.86
-anchor_bottom = 0.376
+anchor_left = 0.146556
+anchor_top = 0.303571
+anchor_right = 0.865556
+anchor_bottom = 0.404571
 offset_left = -15.52
 offset_top = -12.5
 offset_right = -0.200012
@@ -77,11 +80,11 @@ layout_mode = 2
 anchor_left = 0.158
 anchor_top = 0.463
 anchor_right = 0.844
-anchor_bottom = 0.553
-offset_left = -20.76
-offset_top = -27.74
-offset_right = 0.319946
-offset_bottom = 0.0599976
+anchor_bottom = 0.591
+offset_left = -15.76
+offset_top = -1.73999
+offset_right = 5.31989
+offset_bottom = -11.18
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
@@ -92,18 +95,33 @@ text = "organisation"
 custom_minimum_size = Vector2(450, 60)
 layout_mode = 2
 anchor_left = 0.129
-anchor_top = 0.619
+anchor_top = 0.652
 anchor_right = 0.872
-anchor_bottom = 0.735
+anchor_bottom = 0.767
 offset_left = -14.88
-offset_top = 0.380005
-offset_right = -6.84003
-offset_bottom = -0.299988
+offset_top = 0.039978
+offset_right = 0.159973
+offset_bottom = 0.339966
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "speech and communiction"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.144
+anchor_bottom = 0.111
+offset_left = 652.0
+offset_top = -32.0
+offset_right = 1113.32
+offset_bottom = 371.22
+scale = Vector2(0.165852, 0.226902)
+pivot_offset = Vector2(-769.385, 32.2083)
+theme_override_font_sizes/font_size = 17
+theme_override_icons/icon = ExtResource("4_vvfmj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_11ndu")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -119,8 +137,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
+visible = false
 position = Vector2(-253, 617)
 scale = Vector2(0.522923, 0.438755)
 texture = ExtResource("3_1k6i1")
 
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
