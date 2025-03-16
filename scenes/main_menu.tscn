@@ -43,10 +43,10 @@ anchor_left = 0.292
 anchor_top = 0.612
 anchor_right = 0.708
 anchor_bottom = 0.673
-offset_left = -0.240021
-offset_top = 0.239929
-offset_right = 0.23999
-offset_bottom = 0.459961
+offset_left = -1.23999
+offset_top = -4.76001
+offset_right = -0.76001
+offset_bottom = -4.53998
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
@@ -98,12 +98,14 @@ anchor_left = 0.5
 anchor_top = 0.497
 anchor_right = 0.525
 anchor_bottom = 0.54
-offset_left = -142.0
-offset_top = -0.0599976
-offset_right = 160.0
-offset_bottom = 12.7999
+offset_left = -220.0
+offset_top = -9.05997
+offset_right = 83.0
+offset_bottom = 3.79999
+scale = Vector2(1.51936, 2.14547)
 theme_override_fonts/normal_font = ExtResource("3_wu84c")
 theme_override_font_sizes/bold_italics_font_size = 1
-text = "Technology for ability not limits"
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1] [rainbow fre 1.0 sat=0.8 val=0.8 speed= 1.0] Technology for ability not limits"
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
