@@ -41,14 +41,14 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.058
-anchor_top = 0.135
-anchor_right = 0.931
-anchor_bottom = 0.233
-offset_left = -13.76
-offset_top = 5.7
-offset_right = 25.6799
-offset_bottom = -6.34001
+anchor_left = 0.445
+anchor_top = 0.141
+anchor_right = 0.5
+anchor_bottom = 0.227
+offset_left = -292.4
+offset_top = -0.180008
+offset_right = 336.0
+offset_bottom = -0.460007
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -143,4 +143,6 @@ scale = Vector2(0.522923, 0.438755)
 texture = ExtResource("3_1k6i1")
 
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
