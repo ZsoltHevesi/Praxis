@@ -39,14 +39,14 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.292
-anchor_top = 0.612
+anchor_left = 0.29
+anchor_top = 0.607
 anchor_right = 0.708
-anchor_bottom = 0.673
-offset_left = -1.23999
-offset_top = -4.76001
+anchor_bottom = 0.668
+offset_left = 0.199982
+offset_top = 0.139954
 offset_right = -0.76001
-offset_bottom = -4.53998
+offset_bottom = 0.359985
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
@@ -87,8 +87,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
-visible = false
-position = Vector2(230, -74)
 texture = ExtResource("2_yloyd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

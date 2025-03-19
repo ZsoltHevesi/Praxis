@@ -59,46 +59,46 @@ text = "Select category of choice"
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-anchor_left = 0.146556
-anchor_top = 0.303571
-anchor_right = 0.865556
-anchor_bottom = 0.404571
-offset_left = -15.52
-offset_top = -12.5
-offset_right = -0.200012
-offset_bottom = -0.480011
+anchor_left = 0.125
+anchor_top = 0.291
+anchor_right = 0.865
+anchor_bottom = 0.404
+offset_left = 0.000320435
+offset_top = -0.18045
+offset_right = 0.200256
+offset_bottom = 0.0795593
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Motor skills"
+text = "Fine Motor Skills"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-anchor_left = 0.158
+anchor_left = 0.136
 anchor_top = 0.463
-anchor_right = 0.844
-anchor_bottom = 0.591
-offset_left = -15.76
+anchor_right = 0.851
+anchor_bottom = 0.58
+offset_left = 0.0799942
 offset_top = -1.73999
-offset_right = 5.31989
-offset_bottom = -11.18
+offset_right = 0.279846
+offset_bottom = -0.400024
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "organisation"
+text = "Gross Motor Skills"
 
 [node name="Button3" type="Button" parent="."]
 custom_minimum_size = Vector2(450, 60)
 layout_mode = 2
-anchor_left = 0.129
+anchor_left = 0.108
 anchor_top = 0.652
 anchor_right = 0.872
 anchor_bottom = 0.767
-offset_left = -14.88
+offset_left = 0.239998
 offset_top = 0.039978
 offset_right = 0.159973
 offset_bottom = 0.339966
@@ -106,17 +106,19 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "speech and communiction"
+text = "Organisation"
 
-[node name="Button4" type="Button" parent="."]
+[node name="backButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.144
-anchor_bottom = 0.111
-offset_left = 652.0
-offset_top = -32.0
-offset_right = 1113.32
-offset_bottom = 371.22
+anchor_left = 0.017
+anchor_top = 0.01
+anchor_right = 0.147
+anchor_bottom = 0.129
+offset_left = 641.76
+offset_top = -24.8
+offset_right = 1113.16
+offset_bottom = 370.58
 scale = Vector2(0.165852, 0.226902)
 pivot_offset = Vector2(-769.385, 32.2083)
 theme_override_font_sizes/font_size = 17
@@ -145,4 +147,4 @@ texture = ExtResource("3_1k6i1")
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_button_4_pressed"]
