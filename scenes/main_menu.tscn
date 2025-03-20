@@ -56,6 +56,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
 text = "Click to begin"
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.461
@@ -87,23 +88,25 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
+position = Vector2(16, 86)
+scale = Vector2(1.08283, 1.15663)
 texture = ExtResource("2_yloyd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.497
-anchor_right = 0.525
-anchor_bottom = 0.54
-offset_left = -220.0
-offset_top = -9.05997
-offset_right = 83.0
-offset_bottom = 3.79999
+anchor_top = 0.472
+anchor_right = 0.532
+anchor_bottom = 0.532
+offset_left = -221.0
+offset_top = 0.439972
+offset_right = 123.96
+offset_bottom = -25.36
 scale = Vector2(1.51936, 2.14547)
 theme_override_fonts/normal_font = ExtResource("3_wu84c")
 theme_override_font_sizes/bold_italics_font_size = 1
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=5.0 connected=1] [rainbow fre 1.0 sat=0.8 val=0.8 speed= 1.0] Technology for ability not limits"
+text = "[wave amp=50.0 freq=5.0 connected=1] Technology for ability not limits"
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
