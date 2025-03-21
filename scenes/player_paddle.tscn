@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://blgmqtioth6ia"]
+
+[ext_resource type="Script" uid="uid://ck0wv1pd80oh" path="res://scripts/player_paddle.gd" id="1_yyijc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0a5"]
+size = Vector2(20, 120)
+
+[node name="PlayerPaddle" type="CharacterBody2D"]
+script = ExtResource("1_yyijc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -10.0
+offset_right = 80.0
+offset_bottom = 110.0
+grow_vertical = 2
+rotation = 1.5708
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_2l0a5")

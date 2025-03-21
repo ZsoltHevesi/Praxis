@@ -1,29 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://clqs2ph3fd4pa"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_clxwn"]
-size = Vector2(20, 120)
+[ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_aveyr"]
 
 [node name="PongSingle" type="Node2D"]
 
-[node name="player" type="StaticBody2D" parent="."]
-light_mask = 3
-visibility_layer = 3
-z_index = 1
+[node name="objectLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="player"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -60.0
-offset_right = 20.0
-offset_bottom = 60.0
-grow_vertical = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(10, 0)
-shape = SubResource("RectangleShape2D_clxwn")
+[node name="PlayerPaddle" parent="objectLayer" instance=ExtResource("1_aveyr")]
+position = Vector2(353, 885)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="Background" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 15
@@ -31,4 +18,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.88, 0.7216, 0.484, 1)

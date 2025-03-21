@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dihhddyhdkr5h"]
 
-[ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scenes/main_menu_3.gd" id="1_tcqh3"]
+[ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scripts/main_menu_3.gd" id="1_tcqh3"]
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="2_bhhwe"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="4_j66do"]
@@ -134,8 +134,8 @@ theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("5_g8u7o")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_epkpe")
 
-[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
