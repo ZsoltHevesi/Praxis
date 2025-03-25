@@ -1,13 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0ubqw278xdew"]
+[gd_scene load_steps=10 format=3 uid="uid://d0ubqw278xdew"]
 
 [ext_resource type="Script" uid="uid://dicnhxxgb1ttd" path="res://scripts/main_menu.gd" id="1_b4hek"]
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="1_litcs"]
-[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="2_yloyd"]
+[ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://images/praxisback-removebg-preview.png" id="3_rtw2f"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_wu84c"]
+[ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://scenes/back.gdshader" id="6_oa1go"]
+[ext_resource type="Texture2D" uid="uid://x2abudumfevc" path="res://images/PRAXIS_GAMES-removebg-preview.png" id="6_rtw2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
 texture = ExtResource("1_litcs")
-modulate_color = Color(0.849621, 0.849621, 0.849621, 1)
+modulate_color = Color(0.85098, 0.85098, 0.85098, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbmy8"]
+shader = ExtResource("6_oa1go")
+shader_parameter/SPEED = 0.2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xnpp"]
 bg_color = Color(1, 1, 1, 1)
@@ -31,9 +37,26 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -3.0
+offset_right = -4.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_tbmy8")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.978
+anchor_bottom = 0.929
+offset_top = 9.0
+offset_right = 16.84
+offset_bottom = 55.58
+texture = ExtResource("3_rtw2f")
+stretch_mode = 1
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(300, 60)
@@ -76,21 +99,16 @@ text = "Praxis"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
-anchor_left = 0.492
+anchor_left = 0.387
 anchor_top = 0.244
 anchor_right = 0.547
-anchor_bottom = 0.285
-offset_left = -0.240021
-offset_top = -0.12001
-offset_right = 0.159973
-offset_bottom = -0.300018
+anchor_bottom = 0.284
+offset_left = 107.36
+offset_top = -2.12
+offset_right = 32.16
+offset_bottom = -0.320007
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Praxislogo" type="Sprite2D" parent="Control"]
-position = Vector2(16, 86)
-scale = Vector2(1.08283, 1.15663)
-texture = ExtResource("2_yloyd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -108,5 +126,9 @@ theme_override_fonts/normal_font = ExtResource("3_wu84c")
 theme_override_font_sizes/bold_italics_font_size = 1
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=1] Technology for ability not limits"
+
+[node name="PraxisGames-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(351, 302)
+texture = ExtResource("6_rtw2f")
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

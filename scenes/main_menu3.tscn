@@ -1,14 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://dihhddyhdkr5h"]
+[gd_scene load_steps=12 format=3 uid="uid://dihhddyhdkr5h"]
 
 [ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scripts/main_menu_3.gd" id="1_tcqh3"]
 [ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="2_bhhwe"]
+[ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://scenes/back.gdshader" id="3_eb315"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
+[ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://images/praxisback-removebg-preview.png" id="4_7i2b5"]
 [ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="4_j66do"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://images/back-arrow.png" id="5_g8u7o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
 texture = ExtResource("2_bhhwe")
 modulate_color = Color(0.849621, 0.849621, 0.849621, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x8cgs"]
+shader = ExtResource("3_eb315")
+shader_parameter/SPEED = 0.2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xnpp"]
 bg_color = Color(1, 1, 1, 1)
@@ -37,6 +43,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_x8cgs")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.978
+anchor_bottom = 0.929
+offset_top = 9.0
+offset_right = 16.84
+offset_bottom = 55.58
+texture = ExtResource("4_7i2b5")
+stretch_mode = 1
+
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 1
@@ -56,7 +74,7 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_x2sip")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Simple"
+text = "Level 1"
 
 [node name="Button2" type="Button" parent="."]
 custom_minimum_size = Vector2(300, 60)
@@ -77,7 +95,7 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_x2sip")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Challenging"
+text = "Level 2"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -134,8 +152,8 @@ theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("5_g8u7o")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_epkpe")
 
-[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
