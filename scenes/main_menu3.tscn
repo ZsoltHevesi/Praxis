@@ -46,12 +46,11 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_x8cgs")
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.978
-anchor_bottom = 0.929
-offset_top = 9.0
-offset_right = 16.84
-offset_bottom = 55.58
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("4_7i2b5")
 stretch_mode = 1
 
@@ -114,7 +113,8 @@ scale = Vector2(1.0236, 0.966158)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_x2sip")
 theme_override_font_sizes/font_size = 50
-text = "Select difficulty level"
+text = "Select Level"
+horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -152,8 +152,8 @@ theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("5_g8u7o")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_epkpe")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

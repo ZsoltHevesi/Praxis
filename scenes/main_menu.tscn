@@ -37,10 +37,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -3.0
-offset_right = -4.0
-offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
@@ -76,7 +72,7 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Click to begin"
+text = "Tap to begin"
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -99,16 +95,17 @@ text = "Praxis"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
-anchor_left = 0.387
-anchor_top = 0.244
-anchor_right = 0.547
-anchor_bottom = 0.284
-offset_left = 107.36
-offset_top = -2.12
-offset_right = 32.16
-offset_bottom = -0.320007
+anchor_left = 0.5
+anchor_top = 0.286
+anchor_right = 0.5
+anchor_bottom = 0.286
+offset_top = -0.279999
+offset_bottom = -0.279999
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="PraxisGames-removebg-preview" type="Sprite2D" parent="Control"]
+texture = ExtResource("6_rtw2f")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -125,10 +122,6 @@ scale = Vector2(1.51936, 2.14547)
 theme_override_fonts/normal_font = ExtResource("3_wu84c")
 theme_override_font_sizes/bold_italics_font_size = 1
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=5.0 connected=1] Technology for ability not limits"
-
-[node name="PraxisGames-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(351, 302)
-texture = ExtResource("6_rtw2f")
+text = "[wave amp=20.0 freq=4.0 connected=1] Technology for ability not limits"
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

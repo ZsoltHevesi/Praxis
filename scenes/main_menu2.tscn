@@ -41,38 +41,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.9888, 1.00124)
 theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_hb8b2")
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.987
-anchor_bottom = 0.986
-offset_top = 9.0
-offset_right = 0.359985
-offset_bottom = -0.280029
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("4_s8d4p")
 stretch_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.445
-anchor_top = 0.141
+anchor_left = 0.5
+anchor_top = 0.176
 anchor_right = 0.5
-anchor_bottom = 0.227
-offset_left = -292.4
-offset_top = -0.180008
-offset_right = 336.0
-offset_bottom = -0.460007
+anchor_bottom = 0.176
+offset_left = -314.2
+offset_top = -42.48
+offset_right = 314.2
+offset_bottom = 41.52
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 48
-text = "Select category of choice"
+text = "Select Game"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 60)
@@ -89,7 +88,7 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Fine Motor Skills"
+text = "Pong"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
@@ -107,24 +106,7 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Gross Motor Skills"
-
-[node name="Button3" type="Button" parent="."]
-custom_minimum_size = Vector2(450, 60)
-layout_mode = 2
-anchor_left = 0.108
-anchor_top = 0.652
-anchor_right = 0.872
-anchor_bottom = 0.767
-offset_left = 0.239998
-offset_top = 0.039978
-offset_right = 0.159973
-offset_bottom = 0.339966
-theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
-theme_override_fonts/font = ExtResource("3_vvfmj")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Organisation"
+text = "Puzzles"
 
 [node name="backButton" type="Button" parent="."]
 layout_mode = 1
@@ -144,6 +126,7 @@ theme_override_icons/icon = ExtResource("4_vvfmj")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_11ndu")
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchor_left = 0.5
 anchor_top = 0.228
@@ -157,12 +140,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Praxislogo" type="Sprite2D" parent="Control"]
-visible = false
 position = Vector2(-253, 617)
 scale = Vector2(0.522923, 0.438755)
 texture = ExtResource("3_1k6i1")
 
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="backButton" to="." method="_on_button_4_pressed"]
