@@ -37,7 +37,6 @@ grow_vertical = 2
 color = Color(0.878431, 0.721569, 0.482353, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_tbmy8")
 layout_mode = 1
 anchors_preset = -1
