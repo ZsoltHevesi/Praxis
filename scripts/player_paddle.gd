@@ -4,6 +4,7 @@ extends CharacterBody2D
 var speed = 1000
 var target_position
 
+
 func _ready():
 	# Ensure the platform starts at the bottom third of the screen
 	position.x = get_viewport_rect().size.x / 2
