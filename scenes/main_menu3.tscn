@@ -1,16 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dihhddyhdkr5h"]
+[gd_scene load_steps=9 format=3 uid="uid://dihhddyhdkr5h"]
 
 [ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scripts/main_menu_3.gd" id="1_tcqh3"]
-[ext_resource type="Texture2D" uid="uid://cg14yt48cowke" path="res://assets/whiteback.jpg" id="2_bhhwe"]
-[ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://scenes/back.gdshader" id="3_eb315"]
-[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
-[ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://images/praxisback-removebg-preview.png" id="4_7i2b5"]
-[ext_resource type="Texture2D" uid="uid://bmvyi0dfxd26h" path="res://assets/praxislogo.png" id="4_j66do"]
-[ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://images/back-arrow.png" id="5_g8u7o"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5fl2"]
-texture = ExtResource("2_bhhwe")
-modulate_color = Color(0.849621, 0.849621, 0.849621, 1)
+[ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="3_eb315"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
+[ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="4_7i2b5"]
+[ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="5_g8u7o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x8cgs"]
 shader = ExtResource("3_eb315")
@@ -34,14 +28,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tcqh3")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_g5fl2")
+color = Color(0.878431, 0.721569, 0.482353, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_x8cgs")
@@ -128,12 +122,6 @@ offset_right = 0.159973
 offset_bottom = -0.300018
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Praxislogo" type="Sprite2D" parent="Control"]
-visible = false
-position = Vector2(-276, 671)
-scale = Vector2(0.478543, 0.417671)
-texture = ExtResource("4_j66do")
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 1

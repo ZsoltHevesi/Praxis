@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm7a0il5e4olc"
-path="res://.godot/imported/Praxis-removebg-preview.png-ad8be0bc778fe567cdac5ace4d24af91.ctex"
+uid="uid://6l13w32kxruc"
+path="res://.godot/imported/backbutton2-removebg-preview.png-cc6ec704ace863b221ef2a02fc2bca87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Praxis-removebg-preview.png"
-dest_files=["res://.godot/imported/Praxis-removebg-preview.png-ad8be0bc778fe567cdac5ace4d24af91.ctex"]
+source_file="res://assets/images/backbutton2-removebg-preview.png"
+dest_files=["res://.godot/imported/backbutton2-removebg-preview.png-cc6ec704ace863b221ef2a02fc2bca87.ctex"]
 
 [params]
 

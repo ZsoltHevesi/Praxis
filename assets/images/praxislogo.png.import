@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccqr7fx0ujamg"
-path="res://.godot/imported/praxisback-removebg-preview.png-3e10a62dce189a5f1999e76b26303c76.ctex"
+uid="uid://bmvyi0dfxd26h"
+path="res://.godot/imported/praxislogo.png-9b3760c57adaf42eea025533e01d2d60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/praxisback-removebg-preview.png"
-dest_files=["res://.godot/imported/praxisback-removebg-preview.png-3e10a62dce189a5f1999e76b26303c76.ctex"]
+source_file="res://assets/images/praxislogo.png"
+dest_files=["res://.godot/imported/praxislogo.png-9b3760c57adaf42eea025533e01d2d60.ctex"]
 
 [params]
 

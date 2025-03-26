@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgmegy2dcew2r"
-path="res://.godot/imported/undo.png-0e68dc699b60e02bff8b5ae8a1bb7ed0.ctex"
+uid="uid://boxxvjbbugaa5"
+path="res://.godot/imported/Studio_Shodwe-removebg-preview.png-586c56a909be253eb06bfba8218c5434.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/undo.png"
-dest_files=["res://.godot/imported/undo.png-0e68dc699b60e02bff8b5ae8a1bb7ed0.ctex"]
+source_file="res://assets/images/Studio_Shodwe-removebg-preview.png"
+dest_files=["res://.godot/imported/Studio_Shodwe-removebg-preview.png-586c56a909be253eb06bfba8218c5434.ctex"]
 
 [params]
 

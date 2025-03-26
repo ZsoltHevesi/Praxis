@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6l13w32kxruc"
-path="res://.godot/imported/backbutton2-removebg-preview.png-11ef5d3aa1aa32dd3d8768f891749f70.ctex"
+uid="uid://cchqiq5e4lbx2"
+path="res://.godot/imported/back-arrow.png-f514e45c277abf7809cb29598f1082a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/backbutton2-removebg-preview.png"
-dest_files=["res://.godot/imported/backbutton2-removebg-preview.png-11ef5d3aa1aa32dd3d8768f891749f70.ctex"]
+source_file="res://assets/images/back-arrow.png"
+dest_files=["res://.godot/imported/back-arrow.png-f514e45c277abf7809cb29598f1082a6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x2abudumfevc"
-path="res://.godot/imported/PRAXIS_GAMES-removebg-preview.png-2a3ca8353b05385dc431ec7c304420ab.ctex"
+path="res://.godot/imported/PRAXIS_GAMES-removebg-preview.png-f91f409199fad8110367b1041fa75623.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/PRAXIS_GAMES-removebg-preview.png"
-dest_files=["res://.godot/imported/PRAXIS_GAMES-removebg-preview.png-2a3ca8353b05385dc431ec7c304420ab.ctex"]
+source_file="res://assets/images/PRAXIS_GAMES-removebg-preview.png"
+dest_files=["res://.godot/imported/PRAXIS_GAMES-removebg-preview.png-f91f409199fad8110367b1041fa75623.ctex"]
 
 [params]
 

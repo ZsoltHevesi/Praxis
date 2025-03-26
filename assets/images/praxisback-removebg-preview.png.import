@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boxxvjbbugaa5"
-path="res://.godot/imported/Studio_Shodwe-removebg-preview.png-6dd0fbb3735ca75eabb3b73ba74b13e0.ctex"
+uid="uid://ccqr7fx0ujamg"
+path="res://.godot/imported/praxisback-removebg-preview.png-a2bb07c950d06af8e9a75117ef752417.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Studio_Shodwe-removebg-preview.png"
-dest_files=["res://.godot/imported/Studio_Shodwe-removebg-preview.png-6dd0fbb3735ca75eabb3b73ba74b13e0.ctex"]
+source_file="res://assets/images/praxisback-removebg-preview.png"
+dest_files=["res://.godot/imported/praxisback-removebg-preview.png-a2bb07c950d06af8e9a75117ef752417.ctex"]
 
 [params]
 
