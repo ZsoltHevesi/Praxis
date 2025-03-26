@@ -4,7 +4,6 @@ extends CharacterBody2D
 var speed = 1000
 var target_position
 
-
 func _ready():
 	# Ensure the platform starts at the bottom third of the screen
 	position.x = get_viewport_rect().size.x / 2
@@ -13,13 +12,21 @@ func _ready():
 	target_position = position.x
 
 func _input(event):
-	# Check for touchscreen tap input
-	if event is InputEventScreenTouch and event.pressed:
-		target_position = event.position.x
+	# Get the Area2D node
+	var area = $"../../Area2D"
+	var collision_shape = area.get_node("CollisionShape2D").shape as RectangleShape2D
+	var area_position = area.global_position
+	var area_rect = Rect2(area_position - collision_shape.extents, collision_shape.extents * 2)
 
-	# Check for touchscreen drag input
-	if event is InputEventScreenDrag:
-		target_position = event.position.x
+	# Check if the touch point is within the Area2D
+	if area_rect.has_point(event.position):
+		# Check for touchscreen tap input
+		if event is InputEventScreenTouch and event.pressed:
+			target_position = event.position.x
+
+		# Check for touchscreen drag input
+		if event is InputEventScreenDrag:
+			target_position = event.position.x
 
 func _process(delta):
 	# Calculate the distance to the target position
