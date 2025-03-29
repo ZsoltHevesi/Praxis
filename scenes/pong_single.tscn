@@ -1,16 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://clqs2ph3fd4pa"]
+[gd_scene load_steps=5 format=3 uid="uid://clqs2ph3fd4pa"]
 
 [ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_aveyr"]
+[ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_kgt8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aveyr"]
-size = Vector2(1081.5, 385.5)
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgt8m"]
+size = Vector2(0, 0)
 
 [node name="PongSingle" type="Node2D"]
 
 [node name="objectLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerPaddle" parent="objectLayer" instance=ExtResource("1_aveyr")]
+[node name="playerBottom" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_aveyr")]
 position = Vector2(353, 885)
+screen_position = 2.2
+area = NodePath("../../AreaBottom")
+
+[node name="PlayerTop" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_aveyr")]
+position = Vector2(347, 79)
+screen_position = 20.2
+area = NodePath("../../AreaTop")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -23,9 +34,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.88, 0.7216, 0.484, 1)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="AreaBottom" type="Area2D" parent="."]
 position = Vector2(360, 980)
+script = ExtResource("2_kgt8m")
+screen_position = 2.2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -150)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBottom"]
 shape = SubResource("RectangleShape2D_aveyr")
+
+[node name="AreaTop" type="Area2D" parent="."]
+position = Vector2(346, 56)
+script = ExtResource("2_kgt8m")
+screen_position = 20.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTop"]
+shape = SubResource("RectangleShape2D_kgt8m")

@@ -1,14 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjxwpiaeun84s"]
+[gd_scene load_steps=5 format=3 uid="uid://cjxwpiaeun84s"]
 
 [ext_resource type="Script" uid="uid://c0jo77f6qupjo" path="res://scripts/main_menu_2.gd" id="1_gign5"]
-[ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_n1ldr"]
-[ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="3_w0hsr"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="4_pn7ul"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="5_y6le1"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hb8b2"]
-shader = ExtResource("2_n1ldr")
-shader_parameter/SPEED = 0.2
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11ndu"]
 
@@ -29,17 +23,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.878431, 0.721569, 0.482353, 1)
-
-[node name="TextureRect" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_hb8b2")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_w0hsr")
-stretch_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

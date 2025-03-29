@@ -3,17 +3,18 @@ extends CharacterBody2D
 # Speed of the platform movement
 var speed = 1000
 var target_position
+@export var screen_position: float
+@export var area: Node2D
 
 func _ready():
 	# Ensure the platform starts at the bottom third of the screen
 	position.x = get_viewport_rect().size.x / 2
-	position.y = get_viewport_rect().size.y * 2 / 2.2
+	position.y = get_viewport_rect().size.y * 2 / screen_position
 	# Initialize target_position to the current position
 	target_position = position.x
 
 func _input(event):
 	# Get the Area2D node
-	var area = $"../../Area2D"
 	var collision_shape = area.get_node("CollisionShape2D").shape as RectangleShape2D
 	var area_position = area.global_position
 	var area_rect = Rect2(area_position - collision_shape.extents, collision_shape.extents * 2)
