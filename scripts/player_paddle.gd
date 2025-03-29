@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
 # Speed of the platform movement
-var speed = 1000
+var speed = 2500
 var target_position
 @export var screen_position: float
 @export var area: Node2D
 
-func _ready():
+func _ready() -> void:
 	# Ensure the platform starts at the bottom third of the screen
 	position.x = get_viewport_rect().size.x / 2
 	position.y = get_viewport_rect().size.y * 2 / screen_position

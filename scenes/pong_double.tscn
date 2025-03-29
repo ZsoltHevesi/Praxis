@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://clqs2ph3fd4pa"]
+
+[ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_e336j"]
+[ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="2_4hwew"]
+[ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_tbin8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgt8m"]
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aveyr"]
+size = Vector2(0, 0)
+
+[node name="PongDouble" type="Node2D"]
+
+[node name="objectLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerTop" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_e336j")]
+position = Vector2(347, 79)
+screen_position = 22.2
+area = NodePath("../../ControlAreaTop")
+
+[node name="playerBottom" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_e336j")]
+position = Vector2(353, 885)
+screen_position = 2.2
+area = NodePath("../../ControlAreaBottom")
+
+[node name="pongBall" parent="objectLayer" instance=ExtResource("2_4hwew")]
+position = Vector2(356, 506)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.88, 0.7216, 0.484, 1)
+
+[node name="ControlAreaTop" type="Area2D" parent="."]
+position = Vector2(346, 56)
+script = ExtResource("2_tbin8")
+screen_position = 22.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlAreaTop"]
+shape = SubResource("RectangleShape2D_kgt8m")
+
+[node name="ControlAreaBottom" type="Area2D" parent="."]
+position = Vector2(360, 980)
+script = ExtResource("2_tbin8")
+screen_position = 2.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlAreaBottom"]
+shape = SubResource("RectangleShape2D_aveyr")
