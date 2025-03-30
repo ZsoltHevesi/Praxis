@@ -40,7 +40,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_4p0xs")
 theme_override_font_sizes/font_size = 48
-text = "What is praxis?"
+text = "How does Pong Help?"
 horizontal_alignment = 1
 
 [node name="backButton2" type="Button" parent="."]
@@ -76,9 +76,17 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_4p0xs")
 theme_override_font_sizes/font_size = 22
-text = "accessible and
- effective, offering opportunities for gradual improvement 
-while keeping players engaged and motivated.
+text = "Pong is a fun and effective way to improve fine motor skills.
+ For individuals with dyspraxia, tasks requiring precise hand-
+eye coordination can be challenging. Pong helps by 
+encouraging smooth, controlled movements, quick reactions, 
+and sustained focus. 
+Players track the ball, time their 
+responses, and refine their motor control in an engaging, 
+stress-free environment. With adjustable difficulty, the 
+game allows gradual skill-building, making practice both 
+enjoyable and rewarding.
+ 
 
 "
 
