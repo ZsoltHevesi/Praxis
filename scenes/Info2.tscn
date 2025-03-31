@@ -90,6 +90,6 @@ enjoyable and rewarding.
 
 "
 
-[connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
-[connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
+[connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
