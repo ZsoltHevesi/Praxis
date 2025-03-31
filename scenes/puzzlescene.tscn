@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c61ywgaxt07hn"]
+[gd_scene load_steps=6 format=3 uid="uid://c61ywgaxt07hn"]
 
 [ext_resource type="PackedScene" uid="uid://bngawl80slbbv" path="res://scenes/puzzle.tscn" id="1_al1tc"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_dmddw"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_vkun4"]
 [ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="3_vkun4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u6dho"]
@@ -9,6 +10,10 @@ shader = ExtResource("2_dmddw")
 shader_parameter/SPEED = 0.2
 
 [node name="Puzzlescene" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 724.0
+offset_bottom = 988.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(368, 487)
@@ -32,6 +37,7 @@ offset_right = -10.0
 offset_bottom = 298.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
 text = "test"
 vertical_alignment = 1
@@ -48,15 +54,16 @@ offset_right = -4.0
 offset_bottom = 402.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
 text = "test"
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_u6dho")
-offset_left = 15.0
-offset_top = -14.0
-offset_right = 733.0
-offset_bottom = 984.0
+offset_left = 9.0
+offset_top = -26.0
+offset_right = 727.0
+offset_bottom = 972.0
 texture = ExtResource("3_vkun4")
 stretch_mode = 1

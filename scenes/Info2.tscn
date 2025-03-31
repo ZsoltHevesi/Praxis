@@ -1,10 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://kshiqx7m5rc1"]
+[gd_scene load_steps=6 format=3 uid="uid://kshiqx7m5rc1"]
 
 [ext_resource type="Script" uid="uid://bwi4fkrcnvbx4" path="res://scenes/info_2.gd" id="1_qkwmw"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_4p0xs"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="3_s2hck"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11ndu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkwmw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -69,7 +80,7 @@ anchor_right = 0.5
 anchor_bottom = 0.557
 offset_left = -347.0
 offset_top = -295.86
-offset_right = 386.0
+offset_right = 388.0
 offset_bottom = 247.14
 scale = Vector2(0.976757, 1.39673)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -81,15 +92,34 @@ text = "Pong is a fun and effective way to improve fine motor skills.
 eye coordination can be challenging. Pong helps by 
 encouraging smooth, controlled movements, quick reactions, 
 and sustained focus. 
-Players track the ball, time their 
-responses, and refine their motor control in an engaging, 
-stress-free environment. With adjustable difficulty, the 
-game allows gradual skill-building, making practice both 
-enjoyable and rewarding.
+Players track the ball, time their responses, and refine their 
+motor control in an engaging, stress-free environment. With 
+adjustable difficulty, the game allows gradual skill-building,
+ making practice both enjoyable and rewarding.
  
 
 "
 
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78
+anchor_top = 0.932
+anchor_right = 0.806
+anchor_bottom = 0.947527
+offset_left = -102.6
+offset_top = -56.36
+offset_right = 120.77
+offset_bottom = 40.4092
+theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
+theme_override_fonts/font = ExtResource("2_4p0xs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qkwmw")
+text = "Next page"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_next1_pressed"]

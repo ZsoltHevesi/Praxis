@@ -144,7 +144,7 @@ theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Puzzles"
+text = "Card Mathing Game"
 
 [connection signal="pressed" from="Button3" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
