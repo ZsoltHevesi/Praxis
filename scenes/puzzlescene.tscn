@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c61ywgaxt07hn"]
+[gd_scene load_steps=5 format=3 uid="uid://c61ywgaxt07hn"]
 
 [ext_resource type="PackedScene" uid="uid://bngawl80slbbv" path="res://scenes/puzzle.tscn" id="1_al1tc"]
+[ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_dmddw"]
+[ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="3_vkun4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u6dho"]
+shader = ExtResource("2_dmddw")
+shader_parameter/SPEED = 0.2
 
 [node name="Puzzlescene" type="Node2D"]
 
@@ -8,7 +14,7 @@
 position = Vector2(368, 487)
 
 [node name="Puzzle" parent="." instance=ExtResource("1_al1tc")]
-position = Vector2(27, 108)
+position = Vector2(27, 152)
 scale = Vector2(4.4, 4.4)
 layer_0/z_index = 5
 
@@ -20,10 +26,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -205.0
-offset_top = 214.0
-offset_right = -3.0
-offset_bottom = 269.0
+offset_left = -212.0
+offset_top = 243.0
+offset_right = -10.0
+offset_bottom = 298.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
@@ -36,12 +42,21 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -209.0
-offset_top = 319.0
-offset_right = -7.0
-offset_bottom = 374.0
+offset_left = -206.0
+offset_top = 347.0
+offset_right = -4.0
+offset_bottom = 402.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "test"
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_u6dho")
+offset_left = 15.0
+offset_top = -14.0
+offset_right = 733.0
+offset_bottom = 984.0
+texture = ExtResource("3_vkun4")
+stretch_mode = 1
