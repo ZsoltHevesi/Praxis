@@ -73,6 +73,7 @@ text = "test"
 vertical_alignment = 1
 
 [node name="Winscreen" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
