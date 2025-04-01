@@ -73,7 +73,6 @@ text = "test"
 vertical_alignment = 1
 
 [node name="Winscreen" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -127,13 +126,12 @@ text = "Go Back Home"
 [node name="final_score_label" type="Label" parent="CanvasLayer/Winscreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 7.978
+anchor_left = 6.275
 anchor_top = 5.721
-anchor_right = 7.978
+anchor_right = 6.275
 anchor_bottom = 5.721
-offset_left = -68.12
 offset_top = -47.84
-offset_right = 31.88
+offset_right = 100.0
 offset_bottom = 22.16
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
@@ -142,13 +140,13 @@ text = "Test"
 [node name="final_turns_label" type="Label" parent="CanvasLayer/Winscreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 7.19
+anchor_left = 6.5
 anchor_top = 7.712
-anchor_right = 7.19
+anchor_right = 6.5
 anchor_bottom = 7.712
-offset_left = -27.6
+offset_left = -3.05176e-05
 offset_top = -42.48
-offset_right = 131.4
+offset_right = 89.0
 offset_bottom = 42.52
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
