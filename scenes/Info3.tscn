@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwuytte36qf1f"]
+[gd_scene load_steps=6 format=3 uid="uid://bwuytte36qf1f"]
 
 [ext_resource type="Script" uid="uid://bwi4fkrcnvbx4" path="res://scenes/info_2.gd" id="1_ta1ci"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_grr2r"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="3_66l7y"]
+[ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="4_grr2r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11ndu"]
 
@@ -46,19 +47,20 @@ horizontal_alignment = 1
 [node name="backButton2" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.017
-anchor_top = 0.01
-anchor_right = 0.147
-anchor_bottom = 0.129
-offset_left = 641.76
-offset_top = -24.8
-offset_right = 1113.16
-offset_bottom = 370.58
-scale = Vector2(0.165852, 0.226902)
+anchor_left = 0.061
+anchor_top = 0.037
+anchor_right = 0.081
+anchor_bottom = 0.037
+offset_left = 43.08
+offset_top = -31.26
+offset_right = 188.68
+offset_bottom = 128.74
+scale = Vector2(0.876823, 1.19052)
 pivot_offset = Vector2(-769.385, 32.2083)
 theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("3_66l7y")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_11ndu")
+icon = ExtResource("4_grr2r")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
