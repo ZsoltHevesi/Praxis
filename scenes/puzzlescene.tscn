@@ -1,9 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://c61ywgaxt07hn"]
+[gd_scene load_steps=7 format=3 uid="uid://c61ywgaxt07hn"]
 
 [ext_resource type="PackedScene" uid="uid://bngawl80slbbv" path="res://scenes/puzzle.tscn" id="1_al1tc"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_dmddw"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_vkun4"]
 [ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="3_vkun4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkun4"]
+bg_color = Color(0.991164, 0.991164, 0.991164, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 8
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u6dho"]
 shader = ExtResource("2_dmddw")
@@ -12,14 +23,16 @@ shader_parameter/SPEED = 0.2
 [node name="Puzzlescene" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 724.0
-offset_bottom = 988.0
+offset_left = -5.0
+offset_top = 3.0
+offset_right = 719.0
+offset_bottom = 991.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(368, 487)
+position = Vector2(365, 498)
 
 [node name="Puzzle" parent="." instance=ExtResource("1_al1tc")]
-position = Vector2(27, 152)
+position = Vector2(27, 127)
 scale = Vector2(4.4, 4.4)
 layer_0/z_index = 5
 
@@ -59,11 +72,64 @@ theme_override_font_sizes/font_size = 40
 text = "test"
 vertical_alignment = 1
 
+[node name="Winscreen" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Winscreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 17.875
+anchor_bottom = 21.45
+offset_left = -15.0
+offset_top = -5.0
+offset_right = 17.0
+offset_bottom = 111.0
+color = Color(0.878431, 0.721569, 0.482353, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.439
+anchor_top = 0.513
+anchor_right = 0.446
+anchor_bottom = 0.513
+offset_left = -73.933
+offset_top = -44.662
+offset_right = 101.838
+offset_bottom = 39.338
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vkun4")
+text = "Play again"
+
+[node name="Label" type="Label" parent="CanvasLayer/Winscreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.93
+anchor_top = 8.812
+anchor_right = 8.316
+anchor_bottom = 8.812
+offset_left = -91.2
+offset_top = -50.48
+offset_right = 142.36
+offset_bottom = 42.52
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
+text = "You win!"
+
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_u6dho")
-offset_left = 9.0
-offset_top = -26.0
-offset_right = 727.0
-offset_bottom = 972.0
+offset_left = -9.0
+offset_top = -7.0
+offset_right = 709.0
+offset_bottom = 991.0
 texture = ExtResource("3_vkun4")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/Winscreen/ColorRect/Button" to="Puzzle" method="_on_play_again_button_pressed"]

@@ -88,6 +88,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PraxisGames-removebg-preview" type="Sprite2D" parent="Control"]
+scale = Vector2(0.826582, 0.823347)
 texture = ExtResource("6_rtw2f")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

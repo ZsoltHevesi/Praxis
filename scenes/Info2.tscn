@@ -120,6 +120,6 @@ text = "Next page"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
+[connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_next1_pressed"]

@@ -87,5 +87,5 @@ supports motor control  and thinking skills. Because it’s calm
 practice important abilities in a fun, stress-free way."
 
 [connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
+[connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]

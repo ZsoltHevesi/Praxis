@@ -9,12 +9,18 @@ var revealed_spots = []
 var tile_pos_to_atlas_pos = {}
 var score = 0
 var turns_taken = 0
+@onready var win_screen = get_tree().get_current_scene().find_child("Winscreen", true, false)
+@onready var puzzle_scene = get_parent()
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setup_board()
 	update_text()
 	pass # Replace with function body.
+	
+
 
 func get_tiles_to_use():
 	var chosen_tile_coords = []
@@ -57,15 +63,27 @@ func _input(event):
 					when_two_cards_revealed()
 
 func when_two_cards_revealed():
-	# the cards match
 	if tile_pos_to_atlas_pos[revealed_spots[0]] == tile_pos_to_atlas_pos[revealed_spots[1]]:
 		score += 1
 		revealed_spots.clear()
+		check_win_condition()
 	else:
-		# the cards did not match
 		put_back_cards_with_delay()
 	turns_taken += 1
 	update_text()
+	
+func check_win_condition():
+	var total_pairs = int((board_size * board_size) / 2)
+	if score == total_pairs:
+		show_win_screen()
+		
+func show_win_screen():
+	win_screen.visible = true
+	puzzle_scene.visible = false
+
+
+
+
 
 func update_text():
 	$"../CanvasLayer/score_label".text = "Score: %d" % score
@@ -82,3 +100,7 @@ func put_back_cards_with_delay():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_play_again_button_pressed():
+	get_tree().reload_current_scene()
