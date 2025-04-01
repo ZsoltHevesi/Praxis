@@ -20,6 +20,7 @@ func _ready() -> void:
 	update_text()
 	pass # Replace with function body.
 	
+	
 
 
 func get_tiles_to_use():
@@ -81,6 +82,20 @@ func show_win_screen():
 	win_screen.visible = true
 	puzzle_scene.visible = false
 
+	# Update labels on the win screen
+#
+	var score_label = win_screen.get_node("final_score_label")
+	var turns_label = win_screen.get_node("final_turns_label")
+	
+	if score_label:
+		score_label.text = "Final Score: %d" % score
+	else:
+		print("❌ Couldn't find 'final_score_label'")
+		
+	if turns_label:
+		turns_label.text = "Turns Taken: %d" % turns_taken
+	else:
+		print("❌ Couldn't find 'final_turns_label'")
 
 
 
@@ -104,3 +119,7 @@ func _process(delta: float) -> void:
 
 func _on_play_again_button_pressed():
 	get_tree().reload_current_scene()
+
+
+func _on_backhome2_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu2.tscn")

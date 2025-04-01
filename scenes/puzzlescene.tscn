@@ -84,10 +84,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 17.875
 anchor_bottom = 21.45
-offset_left = -15.0
+offset_left = -14.0
 offset_top = -5.0
-offset_right = 17.0
-offset_bottom = 111.0
+offset_right = 18.0
+offset_bottom = 122.0
 color = Color(0.878431, 0.721569, 0.482353, 1)
 
 [node name="Button" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
@@ -97,29 +97,77 @@ anchor_left = 0.439
 anchor_top = 0.513
 anchor_right = 0.446
 anchor_bottom = 0.513
-offset_left = -73.933
-offset_top = -44.662
-offset_right = 101.838
-offset_bottom = 39.338
+offset_left = -89.933
+offset_top = -60.305
+offset_right = 161.838
+offset_bottom = 39.695
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vkun4")
 text = "Play again"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.441
+anchor_top = 0.601
+anchor_right = 0.449
+anchor_bottom = 0.601
+offset_left = -93.427
+offset_top = -37.985
+offset_right = 159.597
+offset_bottom = 66.015
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vkun4")
+text = "Go Back Home"
+
+[node name="final_score_label" type="Label" parent="CanvasLayer/Winscreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.978
+anchor_top = 5.721
+anchor_right = 7.978
+anchor_bottom = 5.721
+offset_left = -68.12
+offset_top = -47.84
+offset_right = 31.88
+offset_bottom = 22.16
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
+text = "Test"
+
+[node name="final_turns_label" type="Label" parent="CanvasLayer/Winscreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 7.19
+anchor_top = 7.712
+anchor_right = 7.19
+anchor_bottom = 7.712
+offset_left = -27.6
+offset_top = -42.48
+offset_right = 131.4
+offset_bottom = 42.52
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
+text = "test"
 
 [node name="Label" type="Label" parent="CanvasLayer/Winscreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 7.93
-anchor_top = 8.812
-anchor_right = 8.316
-anchor_bottom = 8.812
-offset_left = -91.2
-offset_top = -50.48
-offset_right = 142.36
-offset_bottom = 42.52
+anchor_top = 2.412
+anchor_right = 8.1
+anchor_bottom = 2.412
+offset_left = -192.2
+offset_top = -61.48
+offset_right = 170.0
+offset_bottom = 81.52
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 81
 text = "You win!"
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -133,3 +181,4 @@ stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CanvasLayer/Winscreen/ColorRect/Button" to="Puzzle" method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Winscreen/ColorRect/Button2" to="Puzzle" method="_on_backhome2_pressed"]
