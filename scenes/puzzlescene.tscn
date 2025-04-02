@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://c61ywgaxt07hn"]
+[gd_scene load_steps=14 format=3 uid="uid://c61ywgaxt07hn"]
 
 [ext_resource type="PackedScene" uid="uid://bngawl80slbbv" path="res://scenes/puzzle.tscn" id="1_al1tc"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="1_yhabg"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_dmddw"]
 [ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="2_pqncd"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_vkun4"]
 [ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="3_vkun4"]
-[ext_resource type="FontFile" uid="uid://fnsna4jh46wf" path="res://assets/fonts/PIXBOB LITE.ttf" id="4_u6dho"]
 [ext_resource type="Texture2D" uid="uid://c1pnjnbh30ed6" path="res://assets/images/youwon2-removebg-preview.png" id="7_yhabg"]
+[ext_resource type="Texture2D" uid="uid://cks548g2mf00v" path="res://assets/images/close.png" id="8_pqncd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u6dho"]
 shader = ExtResource("2_dmddw")
@@ -24,6 +25,15 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhabg"]
+bg_color = Color(0.716296, 0.716296, 0.716296, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlx1a"]
 
 [node name="Puzzlescene" type="Control"]
 layout_mode = 3
@@ -57,15 +67,15 @@ metadata/_edit_use_anchors_ = true
 [node name="backButton3" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.017
-anchor_top = 0.01
-anchor_right = 0.147
-anchor_bottom = 0.129
-offset_left = 55.76
-offset_top = 3.2
-offset_right = 122.16
-offset_bottom = 46.58
-scale = Vector2(0.892199, 1.15937)
+anchor_left = 0.073
+anchor_top = 0.069
+anchor_right = 0.073
+anchor_bottom = 0.075
+offset_left = -18.56
+offset_top = -53.62
+offset_right = 141.44
+offset_bottom = 100.5
+scale = Vector2(0.927648, 0.892372)
 pivot_offset = Vector2(-769.385, 32.2083)
 theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("1_yhabg")
@@ -92,8 +102,8 @@ offset_bottom = -7.76001
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 55
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
 text = "test"
 vertical_alignment = 1
 
@@ -110,8 +120,8 @@ offset_bottom = -0.140015
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 55
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
 text = "test"
 vertical_alignment = 1
 
@@ -126,8 +136,8 @@ offset_top = -24.56
 offset_right = 30.92
 offset_bottom = 46.9
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 30
 text = "test3
 "
 
@@ -152,34 +162,34 @@ color = Color(0.878431, 0.721569, 0.482353, 1)
 [node name="Button" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.314
-anchor_top = 0.451
-anchor_right = 0.671
-anchor_bottom = 0.554
-offset_left = 0.0670166
-offset_top = 0.454987
-offset_right = -0.161987
-offset_bottom = -0.485046
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -48.0
+offset_right = 201.0
+offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_vkun4")
 text = "Play again"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.311
-anchor_top = 0.562
-anchor_right = 0.671
-anchor_bottom = 0.668
-offset_left = 0.173004
-offset_top = 0.234985
-offset_right = -0.242981
-offset_bottom = 0.35498
+anchor_left = 0.542
+anchor_top = 0.619
+anchor_right = 0.542
+anchor_bottom = 0.619
+offset_left = -180.24
+offset_top = -51.62
+offset_right = 179.76
+offset_bottom = 52.38
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 33
 theme_override_styles/normal = SubResource("StyleBoxFlat_vkun4")
 text = "Go Back Home"
 
@@ -202,7 +212,7 @@ offset_bottom = -0.280029
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
+theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 55
 text = "Test"
 
@@ -220,7 +230,7 @@ offset_bottom = 0.0599365
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
+theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 55
 text = "test"
 
@@ -228,37 +238,112 @@ text = "test"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.456
-anchor_top = 0.242
-anchor_right = 0.5
+anchor_top = 0.258
+anchor_right = 0.456
 anchor_bottom = 0.258
 offset_left = -184.32
-offset_top = -56.16
-offset_right = 153.0
+offset_top = -71.84
+offset_right = 184.68
 offset_bottom = 71.16
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 133
-text = "You win"
+theme_override_colors/font_color = Color(0.625074, 0.494195, 0, 1)
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 86
+text = "You win!"
 
 [node name="final_high_score_label" type="Label" parent="CanvasLayer/Winscreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.513
-anchor_top = 0.395
-anchor_right = 0.516
-anchor_bottom = 0.422
-offset_left = -72.36
-offset_top = -17.1
-offset_right = 25.48
-offset_bottom = 49.44
+anchor_left = 0.104
+anchor_top = 0.403
+anchor_right = 0.104
+anchor_bottom = 0.403
+offset_left = -25.88
+offset_top = -36.94
+offset_right = 88.12
+offset_bottom = 107.06
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_u6dho")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
 text = "test3
 "
+
+[node name="InstructionsScreen" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchor_left = 0.253
+anchor_top = 0.299
+anchor_right = 0.741
+anchor_bottom = 0.721
+offset_left = -0.160019
+offset_top = -18.02
+offset_right = 37.48
+offset_bottom = -20.58
+
+[node name="Panel" type="Panel" parent="CanvasLayer/InstructionsScreen"]
+layout_mode = 0
+offset_left = -155.0
+offset_top = -178.0
+offset_right = 534.0
+offset_bottom = 683.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yhabg")
+
+[node name="Label" type="Label" parent="CanvasLayer/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.404
+anchor_top = 0.632
+anchor_right = 0.464
+anchor_bottom = 0.674
+offset_left = -286.156
+offset_top = -364.752
+offset_right = 374.504
+offset_bottom = 379.986
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 27
+text = "
+👆Tap one tile to see the picture.
+
+👉 Tap a second tile to try and match it.
+
+✅ If the pictures match, they stay flipped.
+
+❌ If they don’t match, they will flip back.
+
+🧩 Keep trying until you match all the pairs.
+
+⏳Take your time — there's no rush!
+
+🎯 Try to match all the pairs using 
+the fewest number of turns."
+
+[node name="Button" type="Button" parent="CanvasLayer/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.372
+anchor_right = 0.338
+anchor_bottom = 0.372
+offset_left = 384.0
+offset_top = -284.892
+offset_right = 764.518
+offset_bottom = 235.108
+scale = Vector2(0.18455, 0.18455)
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_xlx1a")
+icon = ExtResource("8_pqncd")
+
+[node name="Label2" type="Label" parent="CanvasLayer/InstructionsScreen"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -138.0
+offset_right = 302.0
+offset_bottom = -68.0
+theme_override_fonts/font = ExtResource("2_vkun4")
+theme_override_font_sizes/font_size = 40
+text = "🧠 How to Play:"
 
 [connection signal="pressed" from="backButton3" to="Puzzle" method="_on_back_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/Winscreen/ColorRect/Button" to="Puzzle" method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Winscreen/ColorRect/Button2" to="Puzzle" method="_on_backhome2_pressed"]
+[connection signal="pressed" from="CanvasLayer/InstructionsScreen/Button" to="Puzzle" method="_on_close_button_pressed"]

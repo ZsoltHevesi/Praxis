@@ -1,5 +1,8 @@
 extends TileMap
 
+
+
+@onready var instructions_screen = get_tree().get_current_scene().find_child("InstructionsScreen", true, false)
 var board_size = 4
 enum Layers{hidden,revealed}
 var SOURCE_NUM = 0
@@ -12,6 +15,7 @@ var turns_taken = 0
 @onready var win_screen = get_tree().get_current_scene().find_child("Winscreen", true, false)
 @onready var puzzle_scene = get_parent()
 const SAVE_FILE_PATH = "user://high_score.save"
+
 
 
 
@@ -119,14 +123,14 @@ func load_high_score() -> int:
 
 
 func update_text():
-	$"../CanvasLayer/score_label".text = "Score %d" % score
-	$"../CanvasLayer/turns_label".text = "Turns Taken %d" % turns_taken
+	$"../CanvasLayer/score_label".text = "Score: %d" % score
+	$"../CanvasLayer/turns_label".text = "Turns Taken: %d" % turns_taken
 
 	var best_score = load_high_score()
 	if best_score != -1:
-		$"../CanvasLayer/best_score_label".text = "Best Score Lowest Turns %d" % best_score
+		$"../CanvasLayer/best_score_label".text = "Best Score (Lowest Turns): %d" % best_score
 	else:
-		$"../CanvasLayer/best_score_label".text = "Best Score Lowest Turns N/A"
+		$"../CanvasLayer/best_score_label".text = "Best Score (Lowest Turns): N/A"
 
 
 
@@ -159,3 +163,8 @@ func _on_backhome2_pressed() -> void:
 
 func _on_back_button_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu2.tscn")
+
+
+func _on_close_button_pressed():
+	if instructions_screen:
+		instructions_screen.visible = false
