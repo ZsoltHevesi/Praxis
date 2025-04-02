@@ -101,8 +101,8 @@ func show_win_screen():
 
 
 func update_text():
-	$"../CanvasLayer/score_label".text = "Score: %d" % score
-	$"../CanvasLayer/turns_label".text = "Turns Taken: %d" % turns_taken
+	$"../CanvasLayer/score_label".text = "Score %d" % score
+	$"../CanvasLayer/turns_label".text = "Turns Taken %d" % turns_taken
 
 
 
@@ -122,4 +122,8 @@ func _on_play_again_button_pressed():
 
 
 func _on_backhome2_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu2.tscn")
+
+
+func _on_back_button_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu2.tscn")
