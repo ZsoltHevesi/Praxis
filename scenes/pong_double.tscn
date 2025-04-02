@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://clqs2ph3fd4pa"]
+[gd_scene load_steps=8 format=3 uid="uid://clqs2ph3fd4pa"]
 
 [ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_e336j"]
 [ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="2_4hwew"]
 [ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_tbin8"]
+[ext_resource type="Script" uid="uid://hboiiu52krtn" path="res://scripts/power_ups_area.gd" id="4_4hwew"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgt8m"]
 size = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aveyr"]
 size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbin8"]
 
 [node name="PongDouble" type="Node2D"]
 
@@ -53,3 +56,11 @@ screen_position = 2.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlAreaBottom"]
 shape = SubResource("RectangleShape2D_aveyr")
+
+[node name="PowerUpsArea" type="Node2D" parent="."]
+script = ExtResource("4_4hwew")
+
+[node name="Area2D" type="Area2D" parent="PowerUpsArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUpsArea/Area2D"]
+shape = SubResource("RectangleShape2D_tbin8")
