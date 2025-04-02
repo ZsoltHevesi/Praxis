@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dihhddyhdkr5h"]
+[gd_scene load_steps=14 format=3 uid="uid://dihhddyhdkr5h"]
 
 [ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scripts/main_menu_3.gd" id="1_tcqh3"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="3_eb315"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://xyd4v7iuxe3n" path="res://assets/images/Level3D-Pressed.png" id="5_eb315"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="5_g8u7o"]
 [ext_resource type="Texture2D" uid="uid://dvdrbu24o5y6x" path="res://assets/images/Level23D.png" id="6_7i2b5"]
+[ext_resource type="FontFile" uid="uid://fnsna4jh46wf" path="res://assets/fonts/PIXBOB LITE.ttf" id="7_x8cgs"]
 [ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="8_7i2b5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x8cgs"]
@@ -103,8 +104,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0236, 0.966158)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_x2sip")
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("7_x8cgs")
+theme_override_font_sizes/font_size = 90
 text = "Select Level"
 horizontal_alignment = 1
 
@@ -128,11 +129,11 @@ anchor_left = 0.088
 anchor_top = 0.076
 anchor_right = 0.088
 anchor_bottom = 0.091
-offset_left = 110.64
-offset_top = -55.48
-offset_right = 270.64
-offset_bottom = 89.82
-scale = Vector2(0.778286, 1.01273)
+offset_left = 42.64
+offset_top = -50.48
+offset_right = 202.64
+offset_bottom = 94.82
+scale = Vector2(0.852029, 0.913451)
 pivot_offset = Vector2(-769.385, 32.2083)
 theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("5_g8u7o")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bj6lewi1nvbqj"]
+[gd_scene load_steps=16 format=3 uid="uid://bj6lewi1nvbqj"]
 
 [ext_resource type="Script" uid="uid://c0jo77f6qupjo" path="res://scripts/main_menu_2.gd" id="1_nf4xv"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="3_7dsen"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bmbeiy3afck7c" path="res://assets/images/InfoButton3D.png" id="5_s8d4p"]
 [ext_resource type="Texture2D" uid="uid://1t33d1d4hije" path="res://assets/images/Pong3D.png" id="7_7dsen"]
 [ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="7_hb8b2"]
+[ext_resource type="FontFile" uid="uid://fnsna4jh46wf" path="res://assets/fonts/PIXBOB LITE.ttf" id="8_ee2js"]
 [ext_resource type="Texture2D" uid="uid://durq60vjcpacm" path="res://assets/images/Puzzles3D.png" id="8_s8d4p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hb8b2"]
@@ -96,15 +97,15 @@ anchor_left = 0.5
 anchor_top = 0.176
 anchor_right = 0.5
 anchor_bottom = 0.176
-offset_left = -314.2
-offset_top = -42.48
-offset_right = 314.2
-offset_bottom = 41.52
+offset_left = -288.0
+offset_top = -43.48
+offset_right = 295.0
+offset_bottom = 80.52
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_vvfmj")
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("8_ee2js")
+theme_override_font_sizes/font_size = 84
 text = "Select Game"
 horizontal_alignment = 1
 
@@ -143,9 +144,9 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxTexture_hb8b2")
 icon = ExtResource("8_s8d4p")
 
-[connection signal="pressed" from="Button3" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="backButton" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_puzzles_pressed"]

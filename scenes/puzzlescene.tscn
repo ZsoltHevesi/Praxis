@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c61ywgaxt07hn"]
+[gd_scene load_steps=8 format=3 uid="uid://c61ywgaxt07hn"]
 
 [ext_resource type="PackedScene" uid="uid://bngawl80slbbv" path="res://scenes/puzzle.tscn" id="1_al1tc"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_dmddw"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_vkun4"]
 [ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="3_vkun4"]
+[ext_resource type="FontFile" uid="uid://fnsna4jh46wf" path="res://assets/fonts/PIXBOB LITE.ttf" id="4_u6dho"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u6dho"]
 shader = ExtResource("2_dmddw")
@@ -69,8 +70,8 @@ offset_bottom = -7.76001
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_vkun4")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_u6dho")
+theme_override_font_sizes/font_size = 55
 text = "test"
 vertical_alignment = 1
 
@@ -87,8 +88,8 @@ offset_bottom = -0.140015
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_vkun4")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("4_u6dho")
+theme_override_font_sizes/font_size = 55
 text = "test"
 vertical_alignment = 1
 
