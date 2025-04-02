@@ -11,6 +11,8 @@ var score = 0
 var turns_taken = 0
 @onready var win_screen = get_tree().get_current_scene().find_child("Winscreen", true, false)
 @onready var puzzle_scene = get_parent()
+const SAVE_FILE_PATH = "user://high_score.save"
+
 
 
 
@@ -82,20 +84,36 @@ func show_win_screen():
 	win_screen.visible = true
 	puzzle_scene.visible = false
 
+	var previous_best = load_high_score()
+
+	# Check if this is a new best score (lower turns = better)
+	if previous_best == -1 or turns_taken < previous_best:
+		save_high_score()
+		previous_best = turns_taken  # update display
+		
 	# Update labels on the win screen
-#
 	var score_label = win_screen.get_node("final_score_label")
 	var turns_label = win_screen.get_node("final_turns_label")
-	
+	var high_score_label = win_screen.get_node("final_high_score_label")  # <-- add this node in your scene
+
 	if score_label:
 		score_label.text = "Final Score: %d" % score
-	else:
-		print("❌ Couldn't find 'final_score_label'")
-		
 	if turns_label:
 		turns_label.text = "Turns Taken: %d" % turns_taken
+	if high_score_label:
+		high_score_label.text = "Best Score (Lowest Turns): %d" % previous_best
+
+
+func load_high_score() -> int:
+	if FileAccess.file_exists(SAVE_FILE_PATH):
+		var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
+		var saved_score = file.get_var()
+		file.close()
+		return saved_score
 	else:
-		print("❌ Couldn't find 'final_turns_label'")
+		return -1  # No saved score yet
+
+
 
 
 
@@ -103,6 +121,13 @@ func show_win_screen():
 func update_text():
 	$"../CanvasLayer/score_label".text = "Score %d" % score
 	$"../CanvasLayer/turns_label".text = "Turns Taken %d" % turns_taken
+
+	var best_score = load_high_score()
+	if best_score != -1:
+		$"../CanvasLayer/best_score_label".text = "Best Score Lowest Turns %d" % best_score
+	else:
+		$"../CanvasLayer/best_score_label".text = "Best Score Lowest Turns N/A"
+
 
 
 
@@ -119,6 +144,13 @@ func _process(delta: float) -> void:
 
 func _on_play_again_button_pressed():
 	get_tree().reload_current_scene()
+	
+	
+func save_high_score():
+	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.WRITE)
+	file.store_var(turns_taken)
+	file.close()
+
 
 
 func _on_backhome2_pressed() -> void:
