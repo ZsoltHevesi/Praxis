@@ -1,11 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bj6lewi1nvbqj"]
+[gd_scene load_steps=15 format=3 uid="uid://bj6lewi1nvbqj"]
 
 [ext_resource type="Script" uid="uid://c0jo77f6qupjo" path="res://scripts/main_menu_2.gd" id="1_nf4xv"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="3_7dsen"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="3_vvfmj"]
 [ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="4_s8d4p"]
 [ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="4_vvfmj"]
-[ext_resource type="Texture2D" uid="uid://0j405lb13x6j" path="res://assets/images/info (1).png" id="5_11ndu"]
+[ext_resource type="Texture2D" uid="uid://bmbeiy3afck7c" path="res://assets/images/InfoButton3D.png" id="5_s8d4p"]
+[ext_resource type="Texture2D" uid="uid://1t33d1d4hije" path="res://assets/images/Pong3D.png" id="7_7dsen"]
+[ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="7_hb8b2"]
+[ext_resource type="Texture2D" uid="uid://durq60vjcpacm" path="res://assets/images/Puzzles3D.png" id="8_s8d4p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hb8b2"]
 shader = ExtResource("3_7dsen")
@@ -15,16 +18,9 @@ shader_parameter/SPEED = 0.2
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11ndu"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xnpp"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 8
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s8d4p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hb8b2"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -64,33 +60,34 @@ anchor_left = 0.96
 anchor_top = 0.041
 anchor_right = 0.96
 anchor_bottom = 0.041
-offset_left = -50.2
-offset_top = -34.18
-offset_right = 461.8
-offset_bottom = 481.82
-scale = Vector2(0.133807, 0.133807)
+offset_left = -111.2
+offset_top = -45.18
+offset_right = 48.8
+offset_bottom = 114.82
+scale = Vector2(1.04109, 1.13282)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 46
 theme_override_styles/normal = SubResource("StyleBoxEmpty_7dsen")
-icon = ExtResource("5_11ndu")
+icon = ExtResource("5_s8d4p")
 
 [node name="backButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.017
-anchor_top = 0.01
-anchor_right = 0.147
-anchor_bottom = 0.129
-offset_left = 641.76
-offset_top = -24.8
-offset_right = 1113.16
-offset_bottom = 370.58
-scale = Vector2(0.165852, 0.226902)
+anchor_left = 0.033
+anchor_top = 0.018
+anchor_right = 0.066
+anchor_bottom = 0.041
+offset_left = 21.24
+offset_top = -17.64
+offset_right = 157.48
+offset_bottom = 119.82
+scale = Vector2(0.907641, 1.11839)
 pivot_offset = Vector2(-769.385, 32.2083)
 theme_override_font_sizes/font_size = 17
 theme_override_icons/icon = ExtResource("4_vvfmj")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_11ndu")
+icon = ExtResource("7_hb8b2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -114,37 +111,37 @@ horizontal_alignment = 1
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-anchor_left = 0.125
-anchor_top = 0.291
-anchor_right = 0.865
-anchor_bottom = 0.404
-offset_left = 0.000320435
-offset_top = -0.18045
-offset_right = 0.200256
-offset_bottom = 0.0795593
+anchor_left = 0.497
+anchor_top = 0.318
+anchor_right = 0.497
+anchor_bottom = 0.329
+offset_left = -159.84
+offset_top = -30.64
+offset_right = 160.16
+offset_bottom = 118.58
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Pong"
+theme_override_styles/normal = SubResource("StyleBoxTexture_s8d4p")
+icon = ExtResource("7_7dsen")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-anchor_left = 0.136
-anchor_top = 0.463
-anchor_right = 0.851
-anchor_bottom = 0.58
-offset_left = 0.0799942
-offset_top = -0.73999
-offset_right = 0.279846
-offset_bottom = 0.599976
+anchor_left = 0.501
+anchor_top = 0.5
+anchor_right = 0.565
+anchor_bottom = 0.536
+offset_left = -159.72
+offset_top = -31.0
+offset_right = 114.2
+offset_bottom = 93.72
 theme_override_colors/font_color = Color(0.0727897, 0.0489836, 0.000928665, 1)
 theme_override_fonts/font = ExtResource("3_vvfmj")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_3xnpp")
-text = "Card Matching Game"
+theme_override_styles/normal = SubResource("StyleBoxTexture_hb8b2")
+icon = ExtResource("8_s8d4p")
 
 [connection signal="pressed" from="Button3" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
