@@ -8,6 +8,6 @@ void fragment() {
     // uv_offset.y += TIME * SPEED; // Uncomment for vertical scrolling
 
     COLOR = texture(TEXTURE, uv_offset);
-	
+
 }
 
