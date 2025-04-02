@@ -8,4 +8,4 @@ func _ready() -> void:
 	position.x = get_viewport_rect().size.x / 2
 	position.y = get_viewport_rect().size.y * 2 / screen_position
 	
-	collision.shape.set_size(Vector2(get_viewport_rect().size.x, get_viewport_rect().size.y / 3.5))
+	collision.shape.set_size(Vector2(get_viewport_rect().size.x, get_viewport_rect().size.y / 1.9))
