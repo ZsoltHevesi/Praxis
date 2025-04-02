@@ -1,11 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjxwpiaeun84s"]
+[gd_scene load_steps=5 format=3 uid="uid://cjxwpiaeun84s"]
 
 [ext_resource type="Script" uid="uid://c0jo77f6qupjo" path="res://scripts/main_menu_2.gd" id="1_gign5"]
-[ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="4_e34te"]
+[ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="4_e34te"]
+[ext_resource type="Texture2D" uid="uid://c52cvlindb1xy" path="res://assets/images/BackButton3D-Pressed.png" id="4_gign5"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="4_pn7ul"]
-[ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="5_y6le1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11ndu"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -28,39 +26,35 @@ color = Color(0.878431, 0.721569, 0.482353, 1)
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.176
-anchor_right = 0.5
-anchor_bottom = 0.176
-offset_left = -314.2
-offset_top = -42.48
-offset_right = 314.2
-offset_bottom = 41.52
+anchor_left = 0.064
+anchor_top = 0.133
+anchor_right = 0.936
+anchor_bottom = 0.218
+offset_left = -0.280014
+offset_top = -0.339996
+offset_right = 0.279968
+offset_bottom = 0.359985
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_pn7ul")
 theme_override_font_sizes/font_size = 48
-text = "What is praxis?"
+text = "What is Praxis?"
 horizontal_alignment = 1
 
-[node name="backButton" type="Button" parent="."]
+[node name="backButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.095
-anchor_top = 0.054
-anchor_right = 0.095
-anchor_bottom = 0.102
-offset_left = 111.6
-offset_top = -34.92
-offset_right = 271.6
-offset_bottom = 78.04
-scale = Vector2(0.774798, 1.04042)
-pivot_offset = Vector2(-769.385, 32.2083)
-theme_override_font_sizes/font_size = 17
-theme_override_icons/icon = ExtResource("5_y6le1")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_11ndu")
-icon = ExtResource("4_e34te")
+anchor_left = 0.037
+anchor_top = 0.024
+anchor_right = 0.162
+anchor_bottom = 0.127
+offset_left = 0.360001
+offset_top = 0.48
+offset_right = 0.360001
+offset_bottom = -0.460007
+texture_normal = ExtResource("4_e34te")
+texture_pressed = ExtResource("4_gign5")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1

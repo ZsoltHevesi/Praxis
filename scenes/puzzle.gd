@@ -24,9 +24,6 @@ const SAVE_FILE_PATH = "user://high_score.save"
 func _ready() -> void:
 	setup_board()
 	update_text()
-	pass # Replace with function body.
-	
-	
 
 
 func get_tiles_to_use():
@@ -116,8 +113,6 @@ func load_high_score() -> int:
 		return saved_score
 	else:
 		return -1  # No saved score yet
-
-
 
 
 

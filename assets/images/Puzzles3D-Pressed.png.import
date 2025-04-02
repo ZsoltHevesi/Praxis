@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6l13w32kxruc"
-path="res://.godot/imported/backbutton2-removebg-preview.png-cc6ec704ace863b221ef2a02fc2bca87.ctex"
+uid="uid://d3vlgis62gl0w"
+path="res://.godot/imported/Puzzles3D-Pressed.png-f5fb6c3f6d2203ff40af6f3574cc5c31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/backbutton2-removebg-preview.png"
-dest_files=["res://.godot/imported/backbutton2-removebg-preview.png-cc6ec704ace863b221ef2a02fc2bca87.ctex"]
+source_file="res://assets/images/Puzzles3D-Pressed.png"
+dest_files=["res://.godot/imported/Puzzles3D-Pressed.png-f5fb6c3f6d2203ff40af6f3574cc5c31.ctex"]
 
 [params]
 

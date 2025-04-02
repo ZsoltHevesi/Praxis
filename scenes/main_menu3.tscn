@@ -1,24 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://dihhddyhdkr5h"]
+[gd_scene load_steps=12 format=3 uid="uid://dihhddyhdkr5h"]
 
 [ext_resource type="Script" uid="uid://dflh1fwm1uoic" path="res://scripts/main_menu_3.gd" id="1_tcqh3"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="3_eb315"]
-[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="3_x2sip"]
 [ext_resource type="Texture2D" uid="uid://ccqr7fx0ujamg" path="res://assets/images/praxisback-removebg-preview.png" id="4_7i2b5"]
-[ext_resource type="Texture2D" uid="uid://xyd4v7iuxe3n" path="res://assets/images/Level3D-Pressed.png" id="5_eb315"]
-[ext_resource type="Texture2D" uid="uid://cchqiq5e4lbx2" path="res://assets/images/back-arrow.png" id="5_g8u7o"]
-[ext_resource type="Texture2D" uid="uid://dvdrbu24o5y6x" path="res://assets/images/Level23D.png" id="6_7i2b5"]
+[ext_resource type="Texture2D" uid="uid://bi3cs1p2f6sam" path="res://assets/images/Level23D-Pressed.png" id="5_7i2b5"]
+[ext_resource type="Texture2D" uid="uid://caml3hgdg7u4" path="res://assets/images/Level3D-Pressed.png" id="5_eb315"]
+[ext_resource type="Texture2D" uid="uid://clplcsvofgvag" path="res://assets/images/Level3D.png" id="6_1bkxd"]
+[ext_resource type="Texture2D" uid="uid://chvch5frx0dm" path="res://assets/images/Level23D.png" id="6_7i2b5"]
+[ext_resource type="Texture2D" uid="uid://c52cvlindb1xy" path="res://assets/images/BackButton3D-Pressed.png" id="6_epkpe"]
 [ext_resource type="FontFile" uid="uid://fnsna4jh46wf" path="res://assets/fonts/PIXBOB LITE.ttf" id="7_x8cgs"]
-[ext_resource type="Texture2D" uid="uid://cghsw8lxae4q4" path="res://assets/images/BackButton3D.png" id="8_7i2b5"]
+[ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="8_7i2b5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x8cgs"]
 shader = ExtResource("3_eb315")
 shader_parameter/SPEED = 0.2
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8cgs"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bkxd"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epkpe"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -49,57 +44,49 @@ grow_vertical = 2
 texture = ExtResource("4_7i2b5")
 stretch_mode = 1
 
-[node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(300, 60)
+[node name="Level2" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.292
-anchor_top = 0.427
-anchor_right = 0.704
-anchor_bottom = 0.527
-offset_left = -4.23999
-offset_top = -39.46
-offset_right = 19.12
-offset_bottom = 22.54
+anchor_left = 0.278
+anchor_top = 0.606
+anchor_right = 0.722
+anchor_bottom = 0.713
+offset_left = -0.160019
+offset_top = 0.119995
+offset_right = 0.159973
+offset_bottom = 0.259949
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.912323, 1.20166)
-theme_override_fonts/font = ExtResource("3_x2sip")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_x8cgs")
-icon = ExtResource("5_eb315")
+texture_normal = ExtResource("6_7i2b5")
+texture_pressed = ExtResource("5_7i2b5")
 
-[node name="Button2" type="Button" parent="."]
-custom_minimum_size = Vector2(300, 60)
+[node name="Level1" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.494
-anchor_top = 0.609
-anchor_right = 0.5
-anchor_bottom = 0.609
-offset_left = -151.68
-offset_top = -25.82
-offset_right = 164.0
-offset_bottom = 134.18
+anchor_left = 0.278
+anchor_top = 0.396
+anchor_right = 0.722
+anchor_bottom = 0.503
+offset_left = -0.160019
+offset_top = -0.0800171
+offset_right = 0.159973
+offset_bottom = 0.059967
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.936433, 0.961503)
-theme_override_fonts/font = ExtResource("3_x2sip")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_1bkxd")
-icon = ExtResource("6_7i2b5")
+texture_normal = ExtResource("6_1bkxd")
+texture_pressed = ExtResource("5_eb315")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.452
-anchor_top = 0.184
-anchor_right = 0.528
-anchor_bottom = 0.242
-offset_left = -265.44
-offset_top = -14.32
-offset_right = 260.84
-offset_bottom = 25.84
+anchor_left = 0.083
+anchor_top = 0.169
+anchor_right = 0.909
+anchor_bottom = 0.265
+offset_left = 0.239998
+offset_top = 0.37999
+offset_right = -13.48
+offset_bottom = 3.29999
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0236, 0.966158)
@@ -109,39 +96,22 @@ theme_override_font_sizes/font_size = 90
 text = "Select Level"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 1
-anchor_left = 0.492
-anchor_top = 0.244
-anchor_right = 0.547
-anchor_bottom = 0.285
-offset_left = -0.240021
-offset_top = -0.12001
-offset_right = 0.159973
-offset_bottom = -0.300018
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button4" type="Button" parent="."]
+[node name="BackButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.088
-anchor_top = 0.076
-anchor_right = 0.088
-anchor_bottom = 0.091
-offset_left = 42.64
-offset_top = -50.48
-offset_right = 202.64
-offset_bottom = 94.82
-scale = Vector2(0.852029, 0.913451)
-pivot_offset = Vector2(-769.385, 32.2083)
-theme_override_font_sizes/font_size = 17
-theme_override_icons/icon = ExtResource("5_g8u7o")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_epkpe")
-icon = ExtResource("8_7i2b5")
+anchor_left = 0.035
+anchor_top = 0.026
+anchor_right = 0.16
+anchor_bottom = 0.128
+offset_left = -0.200001
+offset_top = -0.480001
+offset_right = -0.200005
+offset_bottom = -0.440002
+texture_normal = ExtResource("8_7i2b5")
+texture_pressed = ExtResource("6_epkpe")
 
-[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_button_4_pressed"]
