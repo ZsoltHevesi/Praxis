@@ -35,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.878431, 0.721569, 0.482353, 1)
+color = Color(0.0823529, 0.490196, 0.694118, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_hb8b2")
@@ -126,7 +126,7 @@ texture_normal = ExtResource("8_s8d4p")
 texture_pressed = ExtResource("8_hb8b2")
 
 [connection signal="pressed" from="InfoButton" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="backButton" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_puzzles_pressed"]
