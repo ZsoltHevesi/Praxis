@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-var speed = 15.0
+var speed = 700.0
 
 func _ready() -> void:
 	velocity = Vector2(0, -speed)
 
-func _physics_process(_delta: float) -> void:
-	var col : KinematicCollision2D = move_and_collide(velocity)
+func _physics_process(delta: float) -> void:
+	# Move the ball with frame-rate independence
+	var col : KinematicCollision2D = move_and_collide(velocity * delta)
 	if col:
 		var normal := col.get_normal()
 		velocity = velocity.bounce(normal)

@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyijc"]
 size = Vector2(30, 120)
 
-[node name="PlayerPaddle" type="CharacterBody2D"]
+[node name="PlayerPaddle" type="StaticBody2D"]
 script = ExtResource("1_yyijc")
 
 [node name="ColorRect" type="ColorRect" parent="."]

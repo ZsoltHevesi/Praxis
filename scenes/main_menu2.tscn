@@ -96,6 +96,7 @@ text = "Select Game"
 horizontal_alignment = 1
 
 [node name="Button" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(320, 105)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.275
@@ -110,16 +111,17 @@ texture_pressed = ExtResource("6_11ndu")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(320, 105)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.276
-anchor_top = 0.528
-anchor_right = 0.721
-anchor_bottom = 0.635
-offset_left = 0.279984
-offset_top = -0.440002
-offset_right = -0.119995
-offset_bottom = -0.300049
+anchor_left = 0.274
+anchor_top = 0.462
+anchor_right = 0.718
+anchor_bottom = 0.569
+offset_left = -0.280014
+offset_top = 0.23999
+offset_right = 0.039978
+offset_bottom = 0.380005
 texture_normal = ExtResource("8_s8d4p")
 texture_pressed = ExtResource("8_hb8b2")
 

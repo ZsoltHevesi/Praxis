@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://kshiqx7m5rc1"]
 
-[ext_resource type="Script" uid="uid://bwi4fkrcnvbx4" path="res://scenes/info_2.gd" id="1_qkwmw"]
+[ext_resource type="Script" uid="uid://bwi4fkrcnvbx4" path="res://scripts/info_2.gd" id="1_qkwmw"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_4p0xs"]
 [ext_resource type="FontFile" uid="uid://fnsna4jh46wf" path="res://assets/fonts/PIXBOB LITE.ttf" id="2_s2hck"]
 [ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="4_4p0xs"]

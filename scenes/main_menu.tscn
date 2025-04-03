@@ -47,6 +47,7 @@ texture = ExtResource("3_rtw2f")
 stretch_mode = 1
 
 [node name="Button" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(160, 95)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -70,10 +71,10 @@ anchor_left = 0.5
 anchor_top = 0.472
 anchor_right = 0.532
 anchor_bottom = 0.532
-offset_left = -221.0
-offset_top = 0.439972
-offset_right = 123.96
-offset_bottom = -25.36
+offset_left = -262.0
+offset_top = -6.56
+offset_right = 82.96
+offset_bottom = -32.36
 scale = Vector2(1.51936, 2.14547)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("7_tbmy8")
@@ -95,17 +96,17 @@ offset_bottom = -0.440002
 texture_normal = ExtResource("6_tbmy8")
 texture_pressed = ExtResource("9_jk1qb")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="Control" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.167
-anchor_top = 0.028
-anchor_right = 0.861
-anchor_bottom = 0.538
-offset_left = -0.240005
-offset_top = -0.440001
-offset_right = 0.0799561
-offset_bottom = -0.240051
+anchor_left = 0.5
+anchor_top = 0.255
+anchor_right = 0.5
+anchor_bottom = 0.255
+offset_top = 0.0999756
+offset_bottom = 0.0999756
+scale = Vector2(1.25, 1.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
 texture = ExtResource("6_rtw2f")
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

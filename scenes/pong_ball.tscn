@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cjc84dyt2uujc" path="res://scripts/pong_ball.gd" id="1_fpa37"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qom4g"]
-radius = 32.0
+radius = 16.0
 
 [sub_resource type="Gradient" id="Gradient_qom4g"]
 offsets = PackedFloat32Array(0.6875, 0.71875, 0.78125)
@@ -17,11 +17,11 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [node name="pongBall" type="CharacterBody2D"]
-motion_mode = 1
 script = ExtResource("1_fpa37")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_qom4g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.51, 0.51)
 texture = SubResource("GradientTexture2D_fpa37")
