@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://clqs2ph3fd4pa"]
+[gd_scene load_steps=11 format=3 uid="uid://clqs2ph3fd4pa"]
 
+[ext_resource type="Script" uid="uid://14gpha7hvjdo" path="res://scripts/pong_main.gd" id="1_5nuk5"]
 [ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_e336j"]
 [ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="2_4hwew"]
 [ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_tbin8"]
@@ -24,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5nuk5")
 
 [node name="objectLayer" type="CanvasLayer" parent="."]
 
@@ -86,7 +88,6 @@ shape = SubResource("RectangleShape2D_5nuk5")
 shape = SubResource("RectangleShape2D_g6wrq")
 
 [node name="TimerLabel" type="Label" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.431
@@ -103,5 +104,3 @@ theme_override_font_sizes/font_size = 60
 text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="pongBall" parent="." instance=ExtResource("2_4hwew")]

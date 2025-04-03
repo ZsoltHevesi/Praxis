@@ -2,15 +2,48 @@ extends CharacterBody2D
 
 var speed = 700.0
 var ball_velocity = Vector2()
+var countdown_time = 4.0
+var timer_label: Label
+var go_display_time = 1.0
 
 func _ready() -> void:
+	position.x = get_viewport_rect().size.x / 2
+	position.y = get_viewport_rect().size.y / 2
+	# Reference the existing TimerLabel node
+	timer_label = $"../../TimerLabel"
+	if timer_label:
+		timer_label.text = str(int(countdown_time))
+		timer_label.show()
+	else:
+		print("Error: TimerLabel node not found")
+
 	# Create and configure the timer
 	var timer = Timer.new()
-	timer.wait_time = 3.0
+	timer.wait_time = countdown_time
 	timer.one_shot = true
 	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
 	add_child(timer)
 	timer.start()
+
+	# Start the countdown
+	set_process(true)
+
+func _process(delta: float) -> void:
+	# Update the countdown timer
+	if countdown_time > 1:
+		countdown_time -= delta
+		if timer_label:
+			timer_label.text = str(int(countdown_time))
+	elif countdown_time > 0:
+		countdown_time -= delta
+		if timer_label:
+			timer_label.text = "Go!"
+	elif go_display_time > 0:
+		go_display_time -= delta
+	else:
+		if timer_label:
+			timer_label.hide()
+		set_process(false)
 
 func _on_Timer_timeout() -> void:
 	# Generate a random angle between -30 and 30 degrees or between 150 and 210 degrees
