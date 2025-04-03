@@ -1,6 +1,5 @@
-[gd_scene load_steps=11 format=3 uid="uid://clqs2ph3fd4pa"]
+[gd_scene load_steps=10 format=3 uid="uid://clqs2ph3fd4pa"]
 
-[ext_resource type="Script" uid="uid://dfqxt4822645" path="res://scripts/pong_main.gd" id="1_5nuk5"]
 [ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_e336j"]
 [ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="2_4hwew"]
 [ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_tbin8"]
@@ -18,8 +17,13 @@ size = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6wrq"]
 
-[node name="PongDouble" type="Node2D"]
-script = ExtResource("1_5nuk5")
+[node name="PongDouble" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="objectLayer" type="CanvasLayer" parent="."]
 
@@ -34,7 +38,7 @@ screen_position = 2.2
 area = NodePath("../../ControlAreaBottom")
 
 [node name="pongBall" parent="objectLayer" instance=ExtResource("2_4hwew")]
-position = Vector2(356, 506)
+position = Vector2(360, 506)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -81,9 +85,21 @@ shape = SubResource("RectangleShape2D_5nuk5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoseBottom"]
 shape = SubResource("RectangleShape2D_g6wrq")
 
-[node name="BallTimer" type="Timer" parent="."]
-wait_time = 3.0
-one_shot = true
-autostart = true
-
-[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
+[node name="TimerLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.431
+anchor_top = 0.393
+anchor_right = 0.569
+anchor_bottom = 0.478
+offset_left = -0.320007
+offset_top = -0.140015
+offset_right = 0.320007
+offset_bottom = -0.440002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
