@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c61ywgaxt07hn"]
+[gd_scene load_steps=15 format=3 uid="uid://c61ywgaxt07hn"]
 
 [ext_resource type="PackedScene" uid="uid://bngawl80slbbv" path="res://scenes/puzzle.tscn" id="1_al1tc"]
 [ext_resource type="Shader" uid="uid://cxlugarsd2dw2" path="res://shaders/back.gdshader" id="2_dmddw"]
@@ -12,6 +12,10 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u6dho"]
 shader = ExtResource("2_dmddw")
 shader_parameter/SPEED = 0.2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqncd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlx1a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vkun4"]
 bg_color = Color(0.991164, 0.991164, 0.991164, 1)
@@ -89,15 +93,16 @@ anchor_left = 0.706
 anchor_top = 0.74
 anchor_right = 0.986
 anchor_bottom = 0.812
-offset_left = -0.320007
-offset_top = 7.79999
-offset_right = 0.0799561
-offset_bottom = -7.76001
+offset_left = -0.319977
+offset_top = 0.799988
+offset_right = 8.08002
+offset_bottom = 0.240051
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_pqncd")
 text = "test"
 vertical_alignment = 1
 
@@ -107,28 +112,29 @@ anchor_left = 0.706
 anchor_top = 0.846
 anchor_right = 0.986
 anchor_bottom = 0.918
-offset_left = -0.320007
-offset_top = 0.419983
-offset_right = 0.0799561
-offset_bottom = -0.140015
+offset_left = -0.319977
+offset_top = 0.919983
+offset_right = 9.08002
+offset_bottom = 0.360046
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xlx1a")
 text = "test"
 vertical_alignment = 1
 
 [node name="best_score_label" type="Label" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.26
-anchor_top = 0.122
-anchor_right = 0.314
-anchor_bottom = 0.145
-offset_left = -30.2
-offset_top = -24.56
-offset_right = 30.92
-offset_bottom = 46.9
+anchor_left = 0.297
+anchor_top = 0.118
+anchor_right = 0.297
+anchor_bottom = 0.118
+offset_left = -70.84
+offset_top = -19.64
+offset_right = 61.16
+offset_bottom = 89.36
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 30
@@ -151,7 +157,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.878431, 0.721569, 0.482353, 1)
+color = Color(0.0823529, 0.490196, 0.694118, 1)
 
 [node name="Button" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
 layout_mode = 1
