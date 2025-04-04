@@ -85,14 +85,14 @@ text = "[wave amp=20.0 freq=4.0 connected=1] Technology for ability not limits"
 [node name="Button2" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.84
-anchor_top = 0.026
-anchor_right = 0.965
-anchor_bottom = 0.128
-offset_left = 0.199951
-offset_top = -0.480001
-offset_right = 0.199951
-offset_bottom = -0.440002
+anchor_left = 0.903
+anchor_top = 0.077
+anchor_right = 0.938
+anchor_bottom = 0.077
+offset_left = -45.1601
+offset_top = -50.46
+offset_right = 19.6399
+offset_bottom = 49.54
 texture_normal = ExtResource("6_tbmy8")
 texture_pressed = ExtResource("9_jk1qb")
 

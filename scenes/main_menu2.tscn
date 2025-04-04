@@ -99,13 +99,14 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(320, 105)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.275
-anchor_top = 0.335
-anchor_right = 0.719
-anchor_bottom = 0.442
-offset_top = -0.300018
-offset_right = 0.319946
-offset_bottom = -0.160034
+anchor_left = 0.452
+anchor_top = 0.388
+anchor_right = 0.452
+anchor_bottom = 0.388
+offset_left = -127.44
+offset_top = -52.24
+offset_right = 192.56
+offset_bottom = 52.7599
 texture_normal = ExtResource("7_7dsen")
 texture_pressed = ExtResource("6_11ndu")
 metadata/_edit_use_anchors_ = true
@@ -114,19 +115,19 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(320, 105)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.274
-anchor_top = 0.462
-anchor_right = 0.718
+anchor_left = 0.453
+anchor_top = 0.5
+anchor_right = 0.471
 anchor_bottom = 0.569
-offset_left = -0.280014
-offset_top = 0.23999
-offset_right = 0.039978
+offset_left = -129.16
+offset_top = -37.0
+offset_right = 177.88
 offset_bottom = 0.380005
 texture_normal = ExtResource("8_s8d4p")
 texture_pressed = ExtResource("8_hb8b2")
 
 [connection signal="pressed" from="InfoButton" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="backButton" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_motorskills_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_puzzles_pressed"]
