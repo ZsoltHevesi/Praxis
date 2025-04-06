@@ -31,12 +31,12 @@ script = ExtResource("1_5nuk5")
 
 [node name="PlayerTop" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_e336j")]
 position = Vector2(347, 79)
-screen_position = 22.2
+screen_position = 15.5
 area = NodePath("../../ControlAreaTop")
 
 [node name="playerBottom" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_e336j")]
 position = Vector2(353, 885)
-screen_position = 2.2
+screen_position = 2.3
 area = NodePath("../../ControlAreaBottom")
 
 [node name="pongBall" parent="objectLayer" instance=ExtResource("2_4hwew")]
@@ -101,6 +101,5 @@ offset_bottom = -0.440002
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -24,25 +24,23 @@ grow_vertical = 2
 script = ExtResource("1_b4hek")
 next_scene = "res://scenes/main_menu2.tscn"
 
-[node name="Panel" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0823529, 0.490196, 0.694118, 1)
+color = Color(0.2001, 0.5267, 0.69, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_tbmy8")
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.978
-anchor_bottom = 0.929
-offset_top = 9.0
-offset_right = 16.84
-offset_bottom = 55.58
-scale = Vector2(1, 1.00229)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_rtw2f")
 stretch_mode = 1
 
