@@ -24,14 +24,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tcqh3")
 
-[node name="Panel" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0818387, 0.490381, 0.693841, 1)
+color = Color(0.262745, 0.54902, 0.690196, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_x8cgs")

@@ -1,10 +1,22 @@
-[gd_scene load_steps=11 format=3 uid="uid://clqs2ph3fd4pa"]
+[gd_scene load_steps=17 format=3 uid="uid://clqs2ph3fd4pa"]
 
 [ext_resource type="Script" uid="uid://14gpha7hvjdo" path="res://scripts/pong_main.gd" id="1_5nuk5"]
 [ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_e336j"]
 [ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="2_4hwew"]
 [ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_tbin8"]
+[ext_resource type="Texture2D" uid="uid://cviafs7mqce0t" path="res://assets/images/PlayButton3D.png" id="3_nj2fo"]
 [ext_resource type="Script" uid="uid://hboiiu52krtn" path="res://scripts/power_ups_area.gd" id="4_4hwew"]
+[ext_resource type="Texture2D" uid="uid://bqa3jqmdu20un" path="res://assets/images/PlayButton3D-Pressed.png" id="4_wspix"]
+[ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="5_0v8qb"]
+[ext_resource type="Texture2D" uid="uid://c52cvlindb1xy" path="res://assets/images/BackButton3D-Pressed.png" id="6_cfqs5"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="6_cvx8r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yecbn"]
+bg_color = Color(0.716296, 0.716296, 0.716296, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgt8m"]
 size = Vector2(0, 0)
@@ -26,6 +38,109 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5nuk5")
+
+[node name="WinLoseScreen" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="InstructionsScreen" type="Control" parent="WinLoseScreen"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="WinLoseScreen/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.88, 0.7216, 0.484, 1)
+
+[node name="Panel" type="Panel" parent="WinLoseScreen/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.008
+anchor_right = 0.993
+anchor_bottom = 0.995
+offset_left = 0.12
+offset_top = 0.16
+offset_right = 0.039978
+offset_bottom = -0.100037
+theme_override_styles/panel = SubResource("StyleBoxFlat_yecbn")
+
+[node name="Label" type="Label" parent="WinLoseScreen/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.289
+anchor_top = 0.012
+anchor_right = 0.858
+anchor_bottom = 0.745
+offset_left = 409.92
+offset_top = 0.24
+offset_right = 718.24
+offset_bottom = -308.1
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_font_sizes/font_size = 27
+text = "👆 Tap and drag both platforms to move them.
+
+🔵 Don't let the ball pass the platforms!
+
+🟥 Obstacles and ball Speed Boosts will appear!
+
+🎯 Try to go as long as you can for a high score!"
+
+[node name="Label2" type="Label" parent="WinLoseScreen/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.885
+anchor_top = 0.307
+anchor_right = 0.982
+anchor_bottom = 0.64
+offset_left = 69.8
+offset_top = 0.139984
+offset_right = 271.96
+offset_bottom = -256.2
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_font_sizes/font_size = 40
+text = "❓ How to Play:"
+
+[node name="PlayButton" type="TextureButton" parent="WinLoseScreen/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.077
+anchor_top = 0.401
+anchor_right = 0.251
+anchor_bottom = 0.617
+offset_left = 125.56
+offset_top = 0.0199585
+offset_right = 160.28
+offset_bottom = -116.66
+rotation = 1.5708
+scale = Vector2(1.325, 1.325)
+texture_normal = ExtResource("3_nj2fo")
+texture_pressed = ExtResource("4_wspix")
+
+[node name="BackButton" type="TextureButton" parent="WinLoseScreen/InstructionsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.865
+anchor_top = 0.045
+anchor_right = 0.982
+anchor_bottom = 0.123
+offset_left = 84.2
+offset_top = -0.0999985
+offset_right = 89.96
+offset_bottom = 23.46
+rotation = 1.5708
+scale = Vector2(0.845, 0.845)
+texture_normal = ExtResource("5_0v8qb")
+texture_pressed = ExtResource("6_cfqs5")
 
 [node name="objectLayer" type="CanvasLayer" parent="."]
 

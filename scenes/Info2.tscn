@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0823529, 0.490196, 0.694118, 1)
+color = Color(0.262745, 0.54902, 0.690196, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -40,7 +40,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_s2hck")
 theme_override_font_sizes/font_size = 70
-text = "How does Pong Help"
+text = "How Pong helps"
 horizontal_alignment = 1
 
 [node name="backButton2" type="TextureButton" parent="."]
@@ -101,7 +101,7 @@ texture_normal = ExtResource("4_4p0xs")
 texture_pressed = ExtResource("5_s2hck")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
+[connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next1_pressed"]

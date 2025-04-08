@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0823529, 0.490196, 0.694118, 1)
+color = Color(0.262745, 0.54902, 0.690196, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -39,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_66l7y")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 70
 text = "How Puzzle Game Helps"
 horizontal_alignment = 1
 
@@ -83,6 +83,6 @@ supports motor control  and thinking skills. Because it’s calm
  and low-pressure, it’s a great way to build confidence and 
 practice important abilities in a fun, stress-free way."
 
-[connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button2_pressed"]
+[connection signal="pressed" from="backButton2" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="backButton2" to="." method="_on_back_button_2_pressed"]

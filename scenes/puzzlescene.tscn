@@ -52,7 +52,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0823529, 0.490196, 0.694118, 1)
+color = Color(0.262745, 0.54902, 0.690196, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_u6dho")
@@ -157,19 +157,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0823529, 0.490196, 0.694118, 1)
+color = Color(0.262745, 0.54902, 0.690196, 1)
 
 [node name="Button" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -155.0
-offset_top = -48.0
-offset_right = 201.0
-offset_bottom = 52.0
+anchor_left = 0.268
+anchor_top = 0.448
+anchor_right = 0.762
+anchor_bottom = 0.55
+offset_left = 0.0399933
+offset_top = -0.0400085
+offset_right = 0.359985
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 40
@@ -179,22 +178,33 @@ text = "Play again"
 [node name="Button2" type="Button" parent="CanvasLayer/Winscreen/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.542
-anchor_top = 0.619
-anchor_right = 0.542
-anchor_bottom = 0.619
-offset_left = -180.24
-offset_top = -51.62
-offset_right = 179.76
-offset_bottom = 52.38
+anchor_left = 0.267
+anchor_top = 0.562
+anchor_right = 0.767
+anchor_bottom = 0.668
+offset_left = -0.240021
+offset_top = 0.23999
+offset_right = -0.23999
+offset_bottom = 0.359985
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 33
 theme_override_styles/normal = SubResource("StyleBoxFlat_vkun4")
-text = "Go Back Home"
+text = "Back to Home"
 
-[node name="Youwon2-removebg-preview" type="Sprite2D" parent="CanvasLayer/Winscreen/ColorRect"]
-position = Vector2(630, 266)
+[node name="Control" type="Control" parent="CanvasLayer/Winscreen/ColorRect"]
+layout_mode = 1
+anchor_left = 0.871
+anchor_top = 0.292
+anchor_right = 0.871
+anchor_bottom = 0.292
+offset_left = -0.120056
+offset_top = -0.160034
+offset_right = -0.120056
+offset_bottom = -0.160034
+
+[node name="Youwon2-removebg-preview" type="Sprite2D" parent="CanvasLayer/Winscreen/ColorRect/Control"]
+position = Vector2(-22, -27)
 scale = Vector2(0.690395, 0.67757)
 texture = ExtResource("7_yhabg")
 
@@ -237,17 +247,17 @@ text = "test"
 [node name="Label" type="Label" parent="CanvasLayer/Winscreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.456
-anchor_top = 0.258
-anchor_right = 0.456
-anchor_bottom = 0.258
-offset_left = -184.32
-offset_top = -71.84
-offset_right = 184.68
-offset_bottom = 71.16
+anchor_left = 0.137
+anchor_top = 0.154
+anchor_right = 0.681
+anchor_bottom = 0.308
+offset_left = 0.359993
+offset_top = 0.0799866
+offset_right = -0.320038
+offset_bottom = 0.159973
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.625074, 0.494195, 0, 1)
+theme_override_colors/font_color = Color(1, 0.783333, 0, 1)
 theme_override_fonts/font = ExtResource("2_vkun4")
 theme_override_font_sizes/font_size = 86
 text = "You win!"
@@ -283,14 +293,14 @@ offset_bottom = -20.58
 [node name="Panel" type="Panel" parent="CanvasLayer/InstructionsScreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.398
-anchor_top = -0.433
-anchor_right = 1.373
-anchor_bottom = 1.662
-offset_left = -0.177979
-offset_top = -0.0369873
-offset_right = -0.0970459
-offset_bottom = -0.0820313
+anchor_left = -0.429
+anchor_top = -0.406
+anchor_right = 1.342
+anchor_bottom = 1.689
+offset_left = -0.118942
+offset_top = -0.133987
+offset_right = -0.0380249
+offset_bottom = -0.179138
 theme_override_styles/panel = SubResource("StyleBoxFlat_yhabg")
 
 [node name="Label" type="Label" parent="CanvasLayer/InstructionsScreen"]
