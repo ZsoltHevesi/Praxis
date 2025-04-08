@@ -22,5 +22,4 @@ func _ready() -> void:
 
 func _on_ScoringArea_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
-		print("Score!")
-		# Add your scoring logic here
+		print("Game Over!")
