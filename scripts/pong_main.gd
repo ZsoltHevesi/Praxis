@@ -1,5 +1,12 @@
 extends Control
 
+const SAVE_FILE_PATH = "user://pong_high_score.save"
+
+@onready var game_over_screen = $GameOverScreen/GameOverScreen
+@onready var score_label = $GameOverScreen/GameOverScreen/Score
+@onready var high_score_label = $GameOverScreen/GameOverScreen/highScore
+var score = 0
+
 func _ready() -> void:
 	# Reference the Area2D nodes
 	var top_scoring_area = $LoseTop
@@ -22,4 +29,15 @@ func _ready() -> void:
 
 func _on_ScoringArea_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
-		print("Game Over!")
+		get_tree().paused = true
+		game_over_screen.visible = true
+
+
+func _on_back_button_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/main_menu3.tscn")
+
+
+func _on_play_button_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/pong_double.tscn")

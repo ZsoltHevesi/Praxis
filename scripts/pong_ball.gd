@@ -46,14 +46,13 @@ func _process(delta: float) -> void:
 		set_process(false)
 
 func _on_Timer_timeout() -> void:
-	# Generate a random angle between -30 and 30 degrees or between 150 and 210 degrees
-	var angle = randf_range(-45, 45)
-	if randi() % 2 == 0:
-		angle += 180
+	# Choose one of four angles: 45 degrees down left, down right, up left, or up right
+	var angles = [45, 135, -45, -135]
+	var angle = angles[randi() % angles.size()]
 	angle = deg_to_rad(angle)
 	
-	# Set the initial ball_velocity based on the random angle
-	ball_velocity = Vector2(sin(angle), cos(angle)) * speed
+	# Set the initial ball_velocity based on the chosen angle
+	ball_velocity = Vector2(cos(angle), sin(angle)) * speed
 
 func _physics_process(delta: float) -> void:
 	# Move the ball with frame-rate independence

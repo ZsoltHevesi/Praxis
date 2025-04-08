@@ -1,11 +1,11 @@
 extends StaticBody2D
 
-
 # Speed of the platform movement
 var speed = 2500
 var target_position
 @export var screen_position: float
 @export var area: Node2D
+@onready var pong_double = $"../.."
 
 
 func _ready() -> void:
@@ -48,3 +48,9 @@ func _process(delta):
 
 	# Ensure the platform stays within the screen bounds
 	position.x = clamp(position.x, 0, get_viewport_rect().size.x - $ColorRect.size.x)
+
+
+func _on_area_2d_body_entered(body):
+	if body is CharacterBody2D:
+		pong_double.score += 1
+	
