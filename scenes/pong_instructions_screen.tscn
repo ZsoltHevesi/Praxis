@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcctj6dkv5grn"]
+
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="1_xnyuh"]
+[ext_resource type="Texture2D" uid="uid://cviafs7mqce0t" path="res://assets/images/PlayButton3D.png" id="2_yp470"]
+[ext_resource type="Texture2D" uid="uid://bqa3jqmdu20un" path="res://assets/images/PlayButton3D-Pressed.png" id="3_dn7kn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yecbn"]
+bg_color = Color(0.716296, 0.716296, 0.716296, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="InstructionsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.88, 0.7216, 0.484, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.008
+anchor_right = 0.993
+anchor_bottom = 0.995
+offset_left = 0.12
+offset_top = 0.16
+offset_right = 0.039978
+offset_bottom = -0.100037
+theme_override_styles/panel = SubResource("StyleBoxFlat_yecbn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.289
+anchor_top = 0.012
+anchor_right = 0.858
+anchor_bottom = 0.745
+offset_left = 409.92
+offset_top = 0.24
+offset_right = 718.24
+offset_bottom = -308.1
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("1_xnyuh")
+theme_override_font_sizes/font_size = 27
+text = "👆 Tap and drag both platforms to move them.
+
+🔵 Don't let the ball pass the platforms!
+
+🟥 Obstacles and ball Speed Boosts will appear!
+
+🎯 Try to go as long as you can for a high score!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.885
+anchor_top = 0.307
+anchor_right = 0.982
+anchor_bottom = 0.64
+offset_left = 69.8
+offset_top = 0.139984
+offset_right = 271.96
+offset_bottom = -256.2
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("1_xnyuh")
+theme_override_font_sizes/font_size = 40
+text = "❓ How to Play:"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.077
+anchor_top = 0.401
+anchor_right = 0.251
+anchor_bottom = 0.617
+offset_left = 125.56
+offset_top = 0.0199585
+offset_right = 160.28
+offset_bottom = -116.66
+rotation = 1.5708
+scale = Vector2(1.325, 1.325)
+texture_normal = ExtResource("2_yp470")
+texture_pressed = ExtResource("3_dn7kn")
