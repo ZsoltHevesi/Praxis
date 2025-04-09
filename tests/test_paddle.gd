@@ -35,14 +35,11 @@ func after_each() -> void:
 	#game_area.free()
 	
 	
-#func test_paddle_position_on_start() -> void:
-	#assert_eq(paddle.position.x, Game_Area.get_viewport_rect().size.x / 2,  "Paddle is not centered on start")
-	#assert_gt(paddle.position.y, 0, "Paddle has not rendered in the bottom half of the page")
+func test_paddle_position_on_start() -> void:
+	assert_eq(paddle.position.x, Game_Area.get_viewport_rect().size.x / 2,  "Paddle is not centered on start")
+	assert_gt(paddle.position.y, 0, "Paddle has not rendered in the bottom half of the page")
 	
-func test_paddle_boundaries() -> void:
-	print("theres nothing here yet")
-	#paddle.position.x = 
-	
+
 	
 func test_paddle_touch_input() ->void:
 	print("paddle tests for touch input")

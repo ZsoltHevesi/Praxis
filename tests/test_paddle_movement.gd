@@ -21,11 +21,11 @@ func before_each() -> void:
 	var paddle_instance = Paddle.instantiate()
 
 	add_child_autofree(paddle_instance)
-	paddle_instance.position = Vector2(0, 500)  # Position below the ball
+	paddle_instance.position = Vector2(0, 500) 
 	
 	var collision_shape = CollisionShape2D.new()
 	collision_shape.shape = RectangleShape2D.new()
-	collision_shape.shape.extents = Vector2(50, 10)  # Adjust size as needed
+	collision_shape.shape.extents = Vector2(50, 10) 
 	paddle_instance.add_child(collision_shape)
 	paddle_instance._ready()
 	
