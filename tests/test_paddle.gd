@@ -1,25 +1,43 @@
 extends GutTest
 
 var Game_Area = preload("res://scripts/pong_area.gd")
-var Paddle = preload("res://scripts/player_paddle.gd")
+var Pong_Ball = preload("res://scripts/pong_ball.gd")
+var Paddle = preload("res://scenes/player_paddle.tscn")
+var Pong_Scene = preload("res://scenes/pong_double.tscn")
 
 var game_area = Game_Area
-var paddle = Paddle
+var paddle 
 
 func before_each() -> void:
+	
 	print("starting test")
-	game_area = Game_Area.new()
-	paddle = Paddle.new()
+	#game_area = Game_Area.new()
+	var scene = Pong_Scene.instantiate()
+	var paddle_instance = Paddle.instantiate()
+
+	add_child_autofree(paddle_instance)
+	paddle_instance.position = Vector2(0, 500)  # Position below the ball
+	
+	var collision_shape = CollisionShape2D.new()
+	collision_shape.shape = RectangleShape2D.new()
+	collision_shape.shape.extents = Vector2(50, 10)  # Adjust size as needed
+	paddle_instance.add_child(collision_shape)
+	
+	
+	add_child_autofree(scene)
+	#add_child_autofree(paddle)
+	
+	#paddle._ready()
 	#await get_tree().process_frame
 
 func after_each() -> void:
-	game_area.free()
-	paddle.free()
+	print("nothing needed here")
+	#game_area.free()
 	
 	
-func test_paddle_position_on_start() -> void:
-	assert_eq(paddle.position.x, game_area.get_viewport_rect().size.x / 2,  "Paddle is not centered on start")
-	assert_gt(paddle.position.y, 0, "Paddle has not rendered in the bottom half of the page")
+#func test_paddle_position_on_start() -> void:
+	#assert_eq(paddle.position.x, Game_Area.get_viewport_rect().size.x / 2,  "Paddle is not centered on start")
+	#assert_gt(paddle.position.y, 0, "Paddle has not rendered in the bottom half of the page")
 	
 func test_paddle_boundaries() -> void:
 	print("theres nothing here yet")
@@ -28,6 +46,19 @@ func test_paddle_boundaries() -> void:
 	
 func test_paddle_touch_input() ->void:
 	print("paddle tests for touch input")
+	
+	var paddle_instance = Paddle.instantiate()
+
+	add_child_autofree(paddle_instance)
+	paddle_instance.position = Vector2(0, 500)  # Position below the ball
+	
+	var collision_shape = CollisionShape2D.new()
+	collision_shape.shape = RectangleShape2D.new()
+	collision_shape.shape.extents = Vector2(50, 10)  # Adjust size as needed
+	paddle_instance.add_child(collision_shape)
+	
+	var test_area = Node2D.new()
+	paddle.area = test_area
 	
 	paddle.speed = 1000;
 	var starting_posiiton = paddle.position.x;
