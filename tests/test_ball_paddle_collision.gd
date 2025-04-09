@@ -57,4 +57,3 @@ func test_ball_paddle_collision():
 	assert_gt(pong_ball.position.y, ball_position_y, "ball has not collided with paddle")
 	
 	
-	
