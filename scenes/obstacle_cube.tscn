@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckpuwt1xm4dps"]
+[gd_scene load_steps=5 format=3 uid="uid://ckpuwt1xm4dps"]
 
 [ext_resource type="Script" uid="uid://n8yqvvtygalg" path="res://scripts/obstacle_cube.gd" id="1_i6yuu"]
+[ext_resource type="Texture2D" uid="uid://bti3422kp1pec" path="res://assets/images/obstacle.png" id="2_ng31v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgita"]
-size = Vector2(46, 46)
+size = Vector2(60, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6yuu"]
-size = Vector2(48, 48)
+size = Vector2(62, 62)
 
 [node name="ObstacleCube" type="Area2D"]
 script = ExtResource("1_i6yuu")
@@ -16,14 +17,11 @@ script = ExtResource("1_i6yuu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_wgita")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -23.0
-offset_top = -23.0
-offset_right = 23.0
-offset_bottom = 23.0
-color = Color(0.77, 0.77, 0.77, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i6yuu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.76, 4.76)
+texture = ExtResource("2_ng31v")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

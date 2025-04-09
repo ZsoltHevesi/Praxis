@@ -7,13 +7,19 @@ extends Control
 @onready var scoreLabel = $canvasBackground/score
 @onready var highScoreLabel = $canvasBackground/highScore
 
+@onready var trophy = $GameOverScreen/GameOverScreen/Trophy
+
 var score = 0
 var high_score = 0
+var previous_high_score = 0
 
 func _ready() -> void:
 	# Reference the Area2D nodes
 	var top_scoring_area = $LoseTop
 	var bottom_scoring_area = $LoseBottom
+	
+	load_high_score()
+	previous_high_score = high_score
 
 	# Connect the body_entered signals to the scoring function
 	top_scoring_area.connect("body_entered", Callable(self, "_on_ScoringArea_body_entered"))
@@ -47,22 +53,29 @@ func _on_ScoringArea_body_entered(body: Node) -> void:
 			high_score = score
 			save_high_score()
 		update_high_score_label()
+		if high_score > previous_high_score:
+			trophy.visible = true
 
 func update_scores():
 	go_score.text = "Score: %d" % score
 	scoreLabel.text = "Score: %d" % score
+	if score > high_score:
+		high_score = score
+		save_high_score()
+		load_high_score()
+		update_high_score_label()
 
 func update_high_score_label():
 	go_high_score.text = "High Score: %d" % high_score
 	highScoreLabel.text = "High Score: %d" % high_score
 
 func save_high_score():
-	var file = FileAccess.open("user://pong_high_score.save", FileAccess.WRITE)
+	var file = FileAccess.open("user://pong_lvl2_high_score.save", FileAccess.WRITE)
 	file.store_var(high_score)
 	file.close()
 
 func load_high_score():
-	var file = FileAccess.open("user://pong_high_score.save", FileAccess.READ)
+	var file = FileAccess.open("user://pong_lvl2_high_score.save", FileAccess.READ)
 	if file:
 		high_score = file.get_var()
 		file.close()
