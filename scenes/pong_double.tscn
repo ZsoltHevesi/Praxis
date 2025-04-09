@@ -75,7 +75,7 @@ offset_right = 0.0400391
 offset_bottom = -0.240051
 theme_override_styles/panel = SubResource("StyleBoxFlat_yecbn")
 
-[node name="Score" type="Label" parent="GameOverScreen/GameOverScreen"]
+[node name="goScore" type="Label" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.642
@@ -92,7 +92,7 @@ theme_override_fonts/font = ExtResource("6_cvx8r")
 theme_override_font_sizes/font_size = 50
 text = "Score:"
 
-[node name="highScore" type="Label" parent="GameOverScreen/GameOverScreen"]
+[node name="goHighScore" type="Label" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.423
@@ -191,16 +191,46 @@ area = NodePath("../../ControlAreaBottom")
 [node name="pongBall" parent="objectLayer" instance=ExtResource("2_4hwew")]
 position = Vector2(360, 506)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="canvasBackground" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="Background" type="ColorRect" parent="CanvasLayer"]
+[node name="Background" type="ColorRect" parent="canvasBackground"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.88, 0.7216, 0.484, 1)
+
+[node name="score" type="Label" parent="canvasBackground"]
+anchors_preset = -1
+anchor_left = 0.018
+anchor_top = 0.393
+anchor_right = 0.092
+anchor_bottom = 0.597
+offset_left = 53.04
+offset_top = -0.140015
+offset_right = 199.76
+offset_bottom = -147.06
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+
+[node name="highScore" type="Label" parent="canvasBackground"]
+anchors_preset = -1
+anchor_left = 0.919
+anchor_top = 0.36
+anchor_right = 0.993
+anchor_bottom = 0.672
+offset_left = 53.32
+offset_top = 0.199982
+offset_right = 306.04
+offset_bottom = -252.56
+rotation = 1.5708
+theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_font_sizes/font_size = 30
+text = "High Score:"
 
 [node name="ControlAreaTop" type="Area2D" parent="."]
 position = Vector2(346, 56)

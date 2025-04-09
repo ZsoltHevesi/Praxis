@@ -53,4 +53,8 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body is CharacterBody2D:
 		pong_double.score += 1
+		pong_double.update_scores()
+		pong_double.save_high_score()
+		pong_double.load_high_score()
+		pong_double.update_high_score_label()
 	

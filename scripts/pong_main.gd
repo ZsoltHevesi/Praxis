@@ -1,11 +1,14 @@
 extends Control
 
-const SAVE_FILE_PATH = "user://pong_high_score.save"
-
 @onready var game_over_screen = $GameOverScreen/GameOverScreen
-@onready var score_label = $GameOverScreen/GameOverScreen/Score
-@onready var high_score_label = $GameOverScreen/GameOverScreen/highScore
+@onready var go_score = $GameOverScreen/GameOverScreen/goScore
+@onready var go_high_score = $GameOverScreen/GameOverScreen/goHighScore
+
+@onready var scoreLabel = $canvasBackground/score
+@onready var highScoreLabel = $canvasBackground/highScore
+
 var score = 0
+var high_score = 0
 
 func _ready() -> void:
 	# Reference the Area2D nodes
@@ -27,10 +30,44 @@ func _ready() -> void:
 	top_shape.extents = Vector2(screen_size.x / 2, screen_size.y / 24)
 	bottom_shape.extents = Vector2(screen_size.x / 2, screen_size.y / 24)
 
+	# Load the high score
+	load_high_score()
+
+	# Update the high score label
+	update_high_score_label()
+
 func _on_ScoringArea_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
 		get_tree().paused = true
 		game_over_screen.visible = true
+		# Update the scores
+		update_scores()
+		# Check and update the high score
+		if score > high_score:
+			high_score = score
+			save_high_score()
+		update_high_score_label()
+
+func update_scores():
+	go_score.text = "Score: %d" % score
+	scoreLabel.text = "Score: %d" % score
+
+func update_high_score_label():
+	go_high_score.text = "High Score: %d" % high_score
+	highScoreLabel.text = "High Score: %d" % high_score
+
+func save_high_score():
+	var file = FileAccess.open("user://pong_high_score.save", FileAccess.WRITE)
+	file.store_var(high_score)
+	file.close()
+
+func load_high_score():
+	var file = FileAccess.open("user://pong_high_score.save", FileAccess.READ)
+	if file:
+		high_score = file.get_var()
+		file.close()
+	else:
+		high_score = 0
 
 
 func _on_back_button_pressed():

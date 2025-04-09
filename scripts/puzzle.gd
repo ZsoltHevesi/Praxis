@@ -66,6 +66,7 @@ func _input(event):
 				if revealed_spots.size() == 2:
 					when_two_cards_revealed()
 
+
 func when_two_cards_revealed():
 	if tile_pos_to_atlas_pos[revealed_spots[0]] == tile_pos_to_atlas_pos[revealed_spots[1]]:
 		score += 1
@@ -75,7 +76,8 @@ func when_two_cards_revealed():
 		put_back_cards_with_delay()
 	turns_taken += 1
 	update_text()
-	
+
+
 func check_win_condition():
 	var total_pairs = int((board_size * board_size) / 2)
 	if score == total_pairs:
