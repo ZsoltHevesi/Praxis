@@ -1,7 +1,8 @@
 extends Node2D
 
-# Path to the powerup scene
-var powerup_scene = preload("res://scenes/obstacle_cube.tscn")
+# Path to the powerup scenes
+var obstacle = preload("res://scenes/obstacle_cube.tscn")
+var speed_boost = preload("res://scenes/speed_boost.tscn")
 
 # Timer to spawn powerups
 var spawn_timer = Timer.new()
@@ -9,7 +10,7 @@ var spawn_timer = Timer.new()
 func _ready():
 	# Add the timer to the scene
 	add_child(spawn_timer)
-	spawn_timer.wait_time = 15.0
+	spawn_timer.wait_time = 12.0
 	spawn_timer.connect("timeout", Callable(self, "_on_spawn_timer_timeout"))
 	spawn_timer.start()
 
@@ -35,7 +36,13 @@ func _on_spawn_timer_timeout():
 		randf_range(area_rect.position.y, area_rect.position.y + area_rect.size.y)
 	)
 
-	# Instance the powerup scene and set its position
-	var powerup_instance = powerup_scene.instantiate()
+	# Decide randomly whether to spawn an obstacle or a speed boost
+	var powerup_instance
+	if randi() % 2 == 0:
+		powerup_instance = obstacle.instantiate()
+	else:
+		powerup_instance = speed_boost.instantiate()
+
+	# Set the position and add the powerup to the scene
 	powerup_instance.position = random_position
 	add_child(powerup_instance)

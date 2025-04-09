@@ -1,16 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://clqs2ph3fd4pa"]
+[gd_scene load_steps=19 format=3 uid="uid://dm3ux4vmhsrn2"]
 
-[ext_resource type="Script" uid="uid://14gpha7hvjdo" path="res://scripts/pong_main.gd" id="1_5nuk5"]
-[ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="1_e336j"]
-[ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="2_4hwew"]
-[ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="2_tbin8"]
-[ext_resource type="Texture2D" uid="uid://cviafs7mqce0t" path="res://assets/images/PlayButton3D.png" id="3_nj2fo"]
-[ext_resource type="Script" uid="uid://hboiiu52krtn" path="res://scripts/power_ups_area.gd" id="4_4hwew"]
-[ext_resource type="Texture2D" uid="uid://bqa3jqmdu20un" path="res://assets/images/PlayButton3D-Pressed.png" id="4_wspix"]
-[ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="5_0v8qb"]
-[ext_resource type="Texture2D" uid="uid://c52cvlindb1xy" path="res://assets/images/BackButton3D-Pressed.png" id="6_cfqs5"]
-[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="6_cvx8r"]
-[ext_resource type="Texture2D" uid="uid://c1pnjnbh30ed6" path="res://assets/images/youwon2-removebg-preview.png" id="7_wspix"]
+[ext_resource type="Script" uid="uid://14gpha7hvjdo" path="res://scripts/pong_main.gd" id="1_leq2b"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_wypss"]
+[ext_resource type="Texture2D" uid="uid://cviafs7mqce0t" path="res://assets/images/PlayButton3D.png" id="3_eqmox"]
+[ext_resource type="Texture2D" uid="uid://bqa3jqmdu20un" path="res://assets/images/PlayButton3D-Pressed.png" id="4_djn4o"]
+[ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="5_xudlq"]
+[ext_resource type="Texture2D" uid="uid://c52cvlindb1xy" path="res://assets/images/BackButton3D-Pressed.png" id="6_x16ys"]
+[ext_resource type="Texture2D" uid="uid://c1pnjnbh30ed6" path="res://assets/images/youwon2-removebg-preview.png" id="7_cgql7"]
+[ext_resource type="PackedScene" uid="uid://blgmqtioth6ia" path="res://scenes/player_paddle.tscn" id="8_wk3nx"]
+[ext_resource type="PackedScene" uid="uid://b74b8enyq84tq" path="res://scenes/ai_paddle.tscn" id="8_wypss"]
+[ext_resource type="PackedScene" uid="uid://w71s7rnddw5s" path="res://scenes/pong_ball.tscn" id="9_jo068"]
+[ext_resource type="Script" uid="uid://cbk3idw08ehr7" path="res://scripts/pong_area.gd" id="10_c73dh"]
+[ext_resource type="Script" uid="uid://hboiiu52krtn" path="res://scripts/power_ups_area.gd" id="11_t4sog"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yecbn"]
 bg_color = Color(0.716296, 0.716296, 0.716296, 1)
@@ -38,7 +39,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5nuk5")
+script = ExtResource("1_leq2b")
 
 [node name="GameOverScreen" type="CanvasLayer" parent="."]
 layer = 3
@@ -88,7 +89,7 @@ offset_right = 321.92
 offset_bottom = -234.36
 rotation = 1.5708
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 50
 text = "Score:"
 
@@ -105,7 +106,7 @@ offset_right = 321.71
 offset_bottom = -234.36
 rotation = 1.5708
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 50
 text = "High Score:"
 
@@ -121,7 +122,7 @@ offset_top = 0.139984
 offset_right = 271.96
 offset_bottom = -278.74
 rotation = 1.5708
-theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 55
 text = "Game Over!"
 
@@ -138,8 +139,8 @@ offset_right = 160.28
 offset_bottom = -116.66
 rotation = 1.5708
 scale = Vector2(1.325, 1.325)
-texture_normal = ExtResource("3_nj2fo")
-texture_pressed = ExtResource("4_wspix")
+texture_normal = ExtResource("3_eqmox")
+texture_pressed = ExtResource("4_djn4o")
 
 [node name="BackButton" type="TextureButton" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
@@ -154,8 +155,8 @@ offset_right = 90.2399
 offset_bottom = -2.02
 rotation = 1.5708
 scale = Vector2(1.135, 1.135)
-texture_normal = ExtResource("5_0v8qb")
-texture_pressed = ExtResource("6_cfqs5")
+texture_normal = ExtResource("5_xudlq")
+texture_pressed = ExtResource("6_x16ys")
 
 [node name="Trophy" type="Control" parent="GameOverScreen/GameOverScreen"]
 visible = false
@@ -174,7 +175,7 @@ scale = Vector2(1.27, 1.27)
 [node name="youWon" type="Sprite2D" parent="GameOverScreen/GameOverScreen/Trophy"]
 position = Vector2(-22, -27)
 scale = Vector2(0.690395, 0.67757)
-texture = ExtResource("7_wspix")
+texture = ExtResource("7_cgql7")
 
 [node name="trophyLabel" type="Label" parent="GameOverScreen/GameOverScreen/Trophy"]
 layout_mode = 1
@@ -183,23 +184,22 @@ offset_top = 43.3076
 offset_right = 96.9923
 offset_bottom = 91.3076
 theme_override_colors/font_color = Color(1, 0.883333, 0, 1)
-theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 27
 text = "New High Score!"
 
 [node name="objectLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerTop" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_e336j")]
-position = Vector2(347, 79)
+[node name="playerTop" parent="objectLayer" instance=ExtResource("8_wypss")]
+position = Vector2(344, 98)
 screen_position = 15.5
-area = NodePath("../../ControlAreaTop")
 
-[node name="playerBottom" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("1_e336j")]
+[node name="playerBottom" parent="objectLayer" node_paths=PackedStringArray("area") instance=ExtResource("8_wk3nx")]
 position = Vector2(353, 885)
 screen_position = 2.3
 area = NodePath("../../ControlAreaBottom")
 
-[node name="pongBall" parent="objectLayer" instance=ExtResource("2_4hwew")]
+[node name="pongBall" parent="objectLayer" instance=ExtResource("9_jo068")]
 position = Vector2(360, 506)
 
 [node name="canvasBackground" type="CanvasLayer" parent="."]
@@ -224,7 +224,7 @@ offset_top = -0.140015
 offset_right = 199.76
 offset_bottom = -147.06
 rotation = 1.5708
-theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 30
 text = "Score: 0"
 
@@ -239,13 +239,13 @@ offset_top = 0.199982
 offset_right = 306.04
 offset_bottom = -252.56
 rotation = 1.5708
-theme_override_fonts/font = ExtResource("6_cvx8r")
+theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 30
 text = "High Score: 0"
 
 [node name="ControlAreaTop" type="Area2D" parent="."]
 position = Vector2(346, 56)
-script = ExtResource("2_tbin8")
+script = ExtResource("10_c73dh")
 screen_position = 22.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlAreaTop"]
@@ -253,14 +253,14 @@ shape = SubResource("RectangleShape2D_kgt8m")
 
 [node name="ControlAreaBottom" type="Area2D" parent="."]
 position = Vector2(360, 980)
-script = ExtResource("2_tbin8")
+script = ExtResource("10_c73dh")
 screen_position = 2.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ControlAreaBottom"]
 shape = SubResource("RectangleShape2D_aveyr")
 
 [node name="PowerUpsArea" type="Node2D" parent="."]
-script = ExtResource("4_4hwew")
+script = ExtResource("11_t4sog")
 
 [node name="Area2D" type="Area2D" parent="PowerUpsArea"]
 

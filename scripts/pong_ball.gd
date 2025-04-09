@@ -5,6 +5,7 @@ var ball_velocity = Vector2()
 var countdown_time = 4.0
 var timer_label: Label
 var go_display_time = 1.0
+var speed_boost_timer = Timer.new()
 
 func _ready() -> void:
 	position.x = get_viewport_rect().size.x / 2
@@ -24,6 +25,11 @@ func _ready() -> void:
 	timer.connect("timeout", Callable(self, "_on_Timer_timeout"))
 	add_child(timer)
 	timer.start()
+
+	# Add the speed boost timer
+	add_child(speed_boost_timer)
+	speed_boost_timer.one_shot = true
+	speed_boost_timer.connect("timeout", Callable(self, "_on_speed_boost_timeout"))
 
 	# Start the countdown
 	set_process(true)
@@ -74,3 +80,17 @@ func _physics_process(delta: float) -> void:
 		if position.y <= 0 or position.y >= screen_size.y:
 			ball_velocity.y = -ball_velocity.y
 			position.y = clamp(position.y, 0, screen_size.y)
+
+func increase_speed(amount: float, duration: float) -> void:
+	speed += amount
+	ball_velocity = ball_velocity.normalized() * speed
+	speed_boost_timer.wait_time = duration
+	speed_boost_timer.start()
+	$fastBall.visible = true
+	$ballSprite.visible = false
+
+func _on_speed_boost_timeout() -> void:
+	speed -= 300
+	ball_velocity = ball_velocity.normalized() * speed
+	$ballSprite.visible = true
+	$fastBall.visible = false

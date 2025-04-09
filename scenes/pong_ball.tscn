@@ -1,20 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://w71s7rnddw5s"]
 
 [ext_resource type="Script" uid="uid://cjc84dyt2uujc" path="res://scripts/pong_ball.gd" id="1_fpa37"]
+[ext_resource type="Texture2D" uid="uid://47oc3fyumm21" path="res://assets/images/pongBall.png" id="2_m6svo"]
+[ext_resource type="Texture2D" uid="uid://jl8o4sodeqim" path="res://assets/images/pongBallRed.png" id="3_76ycj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpa37"]
 size = Vector2(32, 32)
-
-[sub_resource type="Gradient" id="Gradient_qom4g"]
-offsets = PackedFloat32Array(0.6875, 0.71875, 0.78125)
-colors = PackedColorArray(0, 0, 0, 1, 0.666667, 0.666667, 0.666667, 0.333333, 0, 0, 0, 0)
-metadata/_snap_enabled = true
-metadata/_snap_count = 32
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_fpa37"]
-gradient = SubResource("Gradient_qom4g")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
 
 [node name="pongBall" type="CharacterBody2D"]
 script = ExtResource("1_fpa37")
@@ -22,6 +13,11 @@ script = ExtResource("1_fpa37")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fpa37")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.51, 0.51)
-texture = SubResource("GradientTexture2D_fpa37")
+[node name="fastBall" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2.325, 2.325)
+texture = ExtResource("3_76ycj")
+
+[node name="ballSprite" type="Sprite2D" parent="."]
+scale = Vector2(2.325, 2.325)
+texture = ExtResource("2_m6svo")

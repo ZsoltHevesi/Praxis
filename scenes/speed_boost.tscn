@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5u11iuoucbtu"]
+
+[ext_resource type="Texture2D" uid="uid://65uoh3jqbx3d" path="res://assets/images/speedBoost.png" id="1_7wd3c"]
+[ext_resource type="Script" uid="uid://dsl0crafqa1mj" path="res://scripts/speed_boost.gd" id="1_rmo5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sdb6"]
+size = Vector2(60, 60)
+
+[node name="speedBoost" type="Area2D"]
+script = ExtResource("1_rmo5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6sdb6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.775, 4.775)
+texture = ExtResource("1_7wd3c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
