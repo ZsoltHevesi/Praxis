@@ -33,27 +33,29 @@ func after_each() -> void:
 	
 
 func test_ball_paddle_collision():
-	
+	#Create paddle instance
 	var paddle_instance = Paddle.instantiate()
 
 	add_child_autofree(paddle_instance)
-	paddle_instance.position = Vector2(0, 500)  # Position below the ball
+	paddle_instance.position = Vector2(0, 500) 
 	
 	var collision_shape = CollisionShape2D.new()
 	collision_shape.shape = RectangleShape2D.new()
-	collision_shape.shape.extents = Vector2(50, 10)  # Adjust size as needed
+	collision_shape.shape.extents = Vector2(50, 10)  
 	paddle_instance.add_child(collision_shape)
 
 	
 	# Set ball position above paddle and moving downward
 	pong_ball.position = Vector2(0, 400)
-	pong_ball.ball_velocity = Vector2(0, 500)  # Moving downward
+	pong_ball.ball_velocity = Vector2(0, 500)  
 	
 	var ball_position_y = pong_ball.position.y
 	
+	#Pass 10 frames 
 	for i in range(10):
 		pong_ball._physics_process(1.0/60.0)
 		
+	#Asserttion 	
 	assert_gt(pong_ball.position.y, ball_position_y, "ball has not collided with paddle")
 	
 	
