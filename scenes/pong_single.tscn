@@ -219,14 +219,14 @@ text = "Score: 0"
 
 [node name="highScore" type="Label" parent="canvasBackground"]
 anchors_preset = -1
-anchor_left = 0.919
-anchor_top = 0.36
-anchor_right = 0.993
-anchor_bottom = 0.672
-offset_left = -243.68
-offset_top = -344.8
-offset_right = 9.04004
-offset_bottom = -597.56
+anchor_left = 0.581
+anchor_top = 0.008
+anchor_right = 1.0
+anchor_bottom = 0.062
+offset_left = -0.320007
+offset_top = 0.16
+offset_right = 4.0
+offset_bottom = 0.239998
 theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 30
 text = "High Score: 0"
