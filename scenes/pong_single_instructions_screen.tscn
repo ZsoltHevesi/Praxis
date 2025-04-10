@@ -1,0 +1,180 @@
+[gd_scene load_steps=10 format=3 uid="uid://bo61qdb8ecavu"]
+
+[ext_resource type="Script" uid="uid://b21jecp85u5jj" path="res://scripts/pong_single_instructions.gd" id="1_gvubk"]
+[ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_l81i3"]
+[ext_resource type="Texture2D" uid="uid://cviafs7mqce0t" path="res://assets/images/PlayButton3D.png" id="3_f184w"]
+[ext_resource type="Texture2D" uid="uid://bqa3jqmdu20un" path="res://assets/images/PlayButton3D-Pressed.png" id="4_ywf30"]
+[ext_resource type="Texture2D" uid="uid://brgx5tiwo4tqi" path="res://assets/images/BackButton3D.png" id="5_4k7ol"]
+[ext_resource type="Texture2D" uid="uid://c52cvlindb1xy" path="res://assets/images/BackButton3D-Pressed.png" id="6_55vn7"]
+[ext_resource type="Texture2D" uid="uid://bti3422kp1pec" path="res://assets/images/obstacle.png" id="7_2rvkq"]
+[ext_resource type="Texture2D" uid="uid://65uoh3jqbx3d" path="res://assets/images/speedBoost.png" id="8_mmanw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yecbn"]
+bg_color = Color(0.716296, 0.716296, 0.716296, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="InstructionsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gvubk")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.88, 0.7216, 0.484, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.008
+anchor_right = 0.993
+anchor_bottom = 0.991
+offset_left = 0.12
+offset_top = 28.16
+offset_right = 0.039978
+offset_bottom = -23.1801
+theme_override_styles/panel = SubResource("StyleBoxFlat_yecbn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.177
+anchor_right = 0.825
+anchor_bottom = 0.694
+offset_top = -0.460007
+offset_right = -6.10352e-05
+offset_bottom = -0.119995
+theme_override_fonts/font = ExtResource("2_l81i3")
+theme_override_font_sizes/font_size = 27
+text = "👆 Tap and drag the bottom platform
+to move it
+
+🔵 Don't let the ball pass the platform!
+
+🟥 Obstacles and ball Speed Boosts
+will appear!
+
+🎯 Try to go as long as you can
+for a high score!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29
+anchor_top = 0.052
+anchor_right = 0.743
+anchor_bottom = 0.123
+offset_left = 0.199982
+offset_top = 0.0399971
+offset_right = 0.039978
+offset_bottom = 0.459999
+theme_override_fonts/font = ExtResource("2_l81i3")
+theme_override_font_sizes/font_size = 40
+text = "❓ How to Play:"
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.356
+anchor_top = 0.732
+anchor_right = 0.65
+anchor_bottom = 0.86
+offset_left = -0.320023
+offset_top = -0.360046
+offset_right = -52.0
+offset_bottom = -30.8
+scale = Vector2(1.325, 1.325)
+texture_normal = ExtResource("3_f184w")
+texture_pressed = ExtResource("4_ywf30")
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.059
+anchor_right = 0.161
+anchor_bottom = 0.145
+offset_left = -0.319939
+offset_top = 0.179996
+offset_right = 14.08
+offset_bottom = 15.9
+scale = Vector2(0.845, 0.845)
+texture_normal = ExtResource("5_4k7ol")
+texture_pressed = ExtResource("6_55vn7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.833
+anchor_top = 0.77
+anchor_right = 0.833
+anchor_bottom = 0.77
+offset_left = 0.239929
+offset_top = 0.399963
+offset_right = 0.239929
+offset_bottom = 0.399963
+scale = Vector2(4.865, 4.865)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture = ExtResource("7_2rvkq")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.747
+anchor_top = 0.808
+anchor_right = 0.924
+anchor_bottom = 0.857
+offset_left = 0.159973
+offset_top = 0.159973
+offset_right = -0.280029
+offset_bottom = 0.139954
+theme_override_fonts/font = ExtResource("2_l81i3")
+theme_override_font_sizes/font_size = 27
+text = "Obstacle"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.187
+anchor_top = 0.77
+anchor_right = 0.187
+anchor_bottom = 0.77
+offset_left = 0.360001
+offset_top = 0.399963
+offset_right = 0.360001
+offset_bottom = 0.399963
+scale = Vector2(4.865, 4.865)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control2"]
+texture = ExtResource("8_mmanw")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.124
+anchor_top = 0.811
+anchor_right = 0.246
+anchor_bottom = 0.912
+offset_left = -0.280006
+offset_top = 0.219971
+offset_right = -0.12001
+offset_bottom = 0.239868
+theme_override_fonts/font = ExtResource("2_l81i3")
+theme_override_font_sizes/font_size = 27
+text = "Speed
+Boost"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

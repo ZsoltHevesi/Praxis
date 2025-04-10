@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://dm3ux4vmhsrn2"]
+[gd_scene load_steps=18 format=3 uid="uid://dm3ux4vmhsrn2"]
 
-[ext_resource type="Script" uid="uid://14gpha7hvjdo" path="res://scripts/pong_main.gd" id="1_leq2b"]
+[ext_resource type="Script" uid="uid://vxyxsoa5ogub" path="res://scripts/pong_single.gd" id="1_wypss"]
 [ext_resource type="FontFile" uid="uid://sikvy487dffv" path="res://assets/fonts/OpenDyslexic-Bold.otf" id="2_wypss"]
 [ext_resource type="Texture2D" uid="uid://cviafs7mqce0t" path="res://assets/images/PlayButton3D.png" id="3_eqmox"]
 [ext_resource type="Texture2D" uid="uid://bqa3jqmdu20un" path="res://assets/images/PlayButton3D-Pressed.png" id="4_djn4o"]
@@ -20,9 +20,6 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgt8m"]
-size = Vector2(0, 0)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aveyr"]
 size = Vector2(0, 0)
 
@@ -39,7 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_leq2b")
+script = ExtResource("1_wypss")
 
 [node name="GameOverScreen" type="CanvasLayer" parent="."]
 layer = 3
@@ -79,15 +76,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yecbn")
 [node name="goScore" type="Label" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.642
-anchor_top = 0.153
-anchor_right = 0.764
-anchor_bottom = 0.482
-offset_left = 87.76
-offset_top = 0.0599823
-offset_right = 321.92
-offset_bottom = -234.36
-rotation = 1.5708
+anchor_left = 0.06
+anchor_top = 0.25
+anchor_right = 0.507
+anchor_bottom = 0.34
+offset_left = -0.200001
+offset_right = -0.0400085
+offset_bottom = -0.200012
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 50
@@ -96,15 +91,14 @@ text = "Score:"
 [node name="goHighScore" type="Label" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.423
-anchor_top = 0.153
-anchor_right = 0.546
-anchor_bottom = 0.482
-offset_left = 88.27
-offset_top = 0.0599823
-offset_right = 321.71
-offset_bottom = -234.36
-rotation = 1.5708
+anchor_left = 0.054
+anchor_top = 0.365
+anchor_right = 0.5
+anchor_bottom = 0.455
+offset_left = 0.119999
+offset_top = 0.299988
+offset_right = 0.999969
+offset_bottom = 0.0999756
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 50
@@ -113,15 +107,14 @@ text = "High Score:"
 [node name="GameOver" type="Label" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.847
-anchor_top = 0.307
-anchor_right = 0.982
-anchor_bottom = 0.663
-offset_left = 97.16
-offset_top = 0.139984
-offset_right = 271.96
-offset_bottom = -278.74
-rotation = 1.5708
+anchor_left = 0.272
+anchor_top = 0.106
+anchor_right = 0.757
+anchor_bottom = 0.205
+offset_left = 0.159988
+offset_top = 0.119995
+offset_right = -0.0400391
+offset_bottom = 0.0999908
 theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 55
 text = "Game Over!"
@@ -129,15 +122,14 @@ text = "Game Over!"
 [node name="PlayButton" type="TextureButton" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.077
-anchor_top = 0.401
-anchor_right = 0.251
-anchor_bottom = 0.617
-offset_left = 125.56
-offset_top = 0.0199585
-offset_right = 160.28
-offset_bottom = -116.66
-rotation = 1.5708
+anchor_left = 0.361
+anchor_top = 0.77
+anchor_right = 0.656
+anchor_bottom = 0.899
+offset_left = 0.0799866
+offset_top = 0.399963
+offset_right = -52.32
+offset_bottom = -31.02
 scale = Vector2(1.325, 1.325)
 texture_normal = ExtResource("3_eqmox")
 texture_pressed = ExtResource("4_djn4o")
@@ -145,15 +137,14 @@ texture_pressed = ExtResource("4_djn4o")
 [node name="BackButton" type="TextureButton" parent="GameOverScreen/GameOverScreen"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.801
-anchor_top = 0.045
-anchor_right = 0.958
+anchor_left = 0.049
+anchor_top = 0.034
+anchor_right = 0.19
 anchor_bottom = 0.149
-offset_left = 113.28
-offset_top = -0.100002
-offset_right = 90.2399
-offset_bottom = -2.02
-rotation = 1.5708
+offset_left = -0.280003
+offset_top = -0.320007
+offset_right = -11.8
+offset_bottom = -13.02
 scale = Vector2(1.135, 1.135)
 texture_normal = ExtResource("5_xudlq")
 texture_pressed = ExtResource("6_x16ys")
@@ -161,15 +152,14 @@ texture_pressed = ExtResource("6_x16ys")
 [node name="Trophy" type="Control" parent="GameOverScreen/GameOverScreen"]
 visible = false
 layout_mode = 1
-anchor_left = 0.611
-anchor_top = 0.847
-anchor_right = 0.611
-anchor_bottom = 0.847
-offset_left = 0.0799866
-offset_top = -0.0600586
-offset_right = 0.0799866
-offset_bottom = -0.0600586
-rotation = 1.5708
+anchor_left = 0.814
+anchor_top = 0.63
+anchor_right = 0.814
+anchor_bottom = 0.63
+offset_left = -0.174988
+offset_top = -0.0200195
+offset_right = -0.174988
+offset_bottom = -0.0200195
 scale = Vector2(1.27, 1.27)
 
 [node name="youWon" type="Sprite2D" parent="GameOverScreen/GameOverScreen/Trophy"]
@@ -215,15 +205,14 @@ color = Color(0.88, 0.7216, 0.484, 1)
 
 [node name="score" type="Label" parent="canvasBackground"]
 anchors_preset = -1
-anchor_left = 0.018
-anchor_top = 0.393
-anchor_right = 0.092
-anchor_bottom = 0.597
-offset_left = 53.04
-offset_top = -0.140015
-offset_right = 199.76
-offset_bottom = -147.06
-rotation = 1.5708
+anchor_left = 0.021
+anchor_top = 0.011
+anchor_right = 0.299
+anchor_bottom = 0.065
+offset_left = -0.120001
+offset_top = 0.219999
+offset_right = -0.280014
+offset_bottom = 0.299995
 theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 30
 text = "Score: 0"
@@ -234,22 +223,13 @@ anchor_left = 0.919
 anchor_top = 0.36
 anchor_right = 0.993
 anchor_bottom = 0.672
-offset_left = 53.32
-offset_top = 0.199982
-offset_right = 306.04
-offset_bottom = -252.56
-rotation = 1.5708
+offset_left = -243.68
+offset_top = -344.8
+offset_right = 9.04004
+offset_bottom = -597.56
 theme_override_fonts/font = ExtResource("2_wypss")
 theme_override_font_sizes/font_size = 30
 text = "High Score: 0"
-
-[node name="ControlAreaTop" type="Area2D" parent="."]
-position = Vector2(346, 56)
-script = ExtResource("10_c73dh")
-screen_position = 22.2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ControlAreaTop"]
-shape = SubResource("RectangleShape2D_kgt8m")
 
 [node name="ControlAreaBottom" type="Area2D" parent="."]
 position = Vector2(360, 980)
